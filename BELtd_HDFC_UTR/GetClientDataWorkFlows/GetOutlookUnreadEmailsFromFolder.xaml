@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,1756</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,1771</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ReadOutlookUnreadEmailsFromFolder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -81,10 +81,9 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get Outlook Emails " sap:VirtualizedContainerService.HintSize="498,1691" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Get Outlook Emails " sap:VirtualizedContainerService.HintSize="498,1706" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Bool_ReadMailsSuccess" />
     </Sequence.Variables>
@@ -95,7 +94,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Program start Info Logging" sap:VirtualizedContainerService.HintSize="456,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Reading Unread Outlook Emails Program Execution Started&quot;]" />
     <ui:LogMessage DisplayName="Logging Emails Folder Info" sap:VirtualizedContainerService.HintSize="456,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[In_EmailsFolder]" />
-    <TryCatch sap2010:Annotation.AnnotationText="This sequence will Get Outlook mail messages from the folder specified in config. It also retries as many tries mentioned in config and sends notification mail if it fails to read outlook." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,975" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="This sequence will Get Outlook mail messages from the folder specified in config using Mails Filter property which is specified in config. It also retries as many tries mentioned in config and sends notification mail if it fails to read outlook." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,990" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

@@ -28,7 +28,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3525,8638</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3520,8391.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -110,10 +110,9 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AppendingVendorData" sap:VirtualizedContainerService.HintSize="3535,8573" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence DisplayName="AppendingVendorData" sap:VirtualizedContainerService.HintSize="3530.4,8326.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="list_MessageVendor" />
       <Variable x:TypeArguments="x:String" Name="strVendorFileFullPath" />
@@ -136,8 +135,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3493,91" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;AppendingVendorData Xaml Execution Started&quot;]" />
-    <Sequence DisplayName="AppendingVendorData" sap:VirtualizedContainerService.HintSize="3493,8350" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3488.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;AppendingVendorData Xaml Execution Started&quot;]" />
+    <Sequence DisplayName="AppendingVendorData" sap:VirtualizedContainerService.HintSize="3488.8,8100.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strCurrentDateTime" />
         <Variable x:TypeArguments="sd:DataTable" Name="dtMasterFileData" />
@@ -148,19 +147,19 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="3451,8125" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[in_MasterFileFullPath]">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="3447.2,7875.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[in_MasterFileFullPath]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3417,8016" sap2010:WorkflowViewState.IdRef="Sequence_26">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3413.6,7765.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign 'Current Date'" sap:VirtualizedContainerService.HintSize="3375,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="Assign 'Current Date'" sap:VirtualizedContainerService.HintSize="3372,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strCurrentDateTime]</OutArgument>
                 </Assign.To>
@@ -168,56 +167,54 @@
                   <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("dd/MM/yyyy")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMasterFileData]" DisplayName="Reading MasterFile" sap:VirtualizedContainerService.HintSize="3375,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[in_MasterSheetName]">
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMasterFileData]" DisplayName="Reading MasterFile" sap:VirtualizedContainerService.HintSize="3372,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[in_MasterSheetName]">
                 <ui:ExcelReadRange.Range>
                   <InArgument x:TypeArguments="x:String">
                     <Literal x:TypeArguments="x:String" Value="" />
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3375,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Master file read success&quot;]" />
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtMasterFileData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="3375,7594" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtMasterFileData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="3372,7472.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3341,7480" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3338.4,7356.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3299,91" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[CurrentRow(&quot;Process Date&quot;).ToString.Contains(strCurrentDateTime)]" />
-                      <If Condition="[CurrentRow(&quot;Process Date&quot;).ToString.Contains(strCurrentDateTime)]" DisplayName="If 'Checking MasterFile Date is Today Date Or Not'" sap:VirtualizedContainerService.HintSize="3299,7257" sap2010:WorkflowViewState.IdRef="If_6">
+                      <If Condition="[CurrentRow(&quot;Process Date&quot;).ToString.Contains(strCurrentDateTime)]" DisplayName="If 'Checking MasterFile Date is Today Date Or Not'" sap:VirtualizedContainerService.HintSize="3296.8,7264" sap2010:WorkflowViewState.IdRef="If_6">
                         <If.Then>
-                          <Sequence DisplayName="CurrentDate Exist" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                          <Sequence DisplayName="CurrentDate Exist" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;CurrentDate is Exist in MasterPaymentFile&quot;]" />
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;CurrentDate is Exist in MasterPaymentFile&quot;]" />
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="No CurrentDate" sap:VirtualizedContainerService.HintSize="2878,7100" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                          <Sequence DisplayName="No CurrentDate" sap:VirtualizedContainerService.HintSize="2877.6,7104.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2836,91" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;CurrentDate Does Not Exist in MasterPaymentFile&quot;]" />
-                            <ui:RetryScope DisplayName="Retry Scope for GetOutlook" sap:VirtualizedContainerService.HintSize="2836,354" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_NumberOfRetries]">
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2836,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;CurrentDate Does Not Exist in MasterPaymentFile&quot;]" />
+                            <ui:RetryScope DisplayName="Retry Scope for GetOutlook" sap:VirtualizedContainerService.HintSize="2836,356" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_NumberOfRetries]">
                               <ui:RetryScope.ActivityBody>
                                 <ActivityAction>
-                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" Filter="[in_SubjectFilter]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[in_MailFolder]" MarkAsRead="True" Messages="[list_MessageVendor]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1000" />
+                                    <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" Filter="[in_SubjectFilter]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[in_MailFolder]" MarkAsRead="True" Messages="[list_MessageVendor]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1000" />
                                   </Sequence>
                                 </ActivityAction>
                               </ui:RetryScope.ActivityBody>
