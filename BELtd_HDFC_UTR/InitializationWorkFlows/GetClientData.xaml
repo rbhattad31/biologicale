@@ -146,16 +146,42 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This flow goes through each pdf in current folder in  attachments folder and removes passwords for whose pdf's password is found correct and extracts Payment reference number and amount from PDFs and updates summary report" DisplayName="Password removal and summary report update" sap:VirtualizedContainerService.HintSize="379,184" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="GetClientDataWorkFlows\PasswordRemovalForPDFsAndUpdateSummaryReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="in_DictAttachmentInfo">[DictAttachmentsInfo]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_PasswordRemovedAttachmentsPath">[in_StrUnprotectedPDFsDateFolderPath]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithText">[in_Config("HDFCUTR_PaymentDoc_RegEx_WithText").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithoutText">[in_Config("HDFCUTR_PaymentDoc_RegEx_WithoutText").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithText">[in_Config("HDFCUTR_Amount_RegEx_WithText").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithoutText">[in_Config("HDFCUTR_Amount_RegEx_WithoutText").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">[StrDateFolderPath]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSavingPath">[in_Config("SummaryReportFileSavingPath").ToString + System.DateTime.Now.ToString(in_Config("DateFormat").ToString) + ".xlsx"]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportCreationPath">[in_StrSummaryReportCreationFilePath]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSheetName">[in_Config("SummaryReportFileSheetName").ToString]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="in_DictAttachmentInfo">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" ExpressionText="DictAttachmentsInfo" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PasswordRemovedAttachmentsPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_StrUnprotectedPDFsDateFolderPath" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithText">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_PaymentDoc_RegEx_WithText&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithoutText">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_PaymentDoc_RegEx_WithoutText&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithText">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_Amount_RegEx_WithText&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithoutText">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_Amount_RegEx_WithoutText&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StrDateFolderPath" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSavingPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportFileSavingPath&quot;).ToString + System.DateTime.Now.ToString(in_Config(&quot;DateFormat&quot;).ToString) + &quot;.xlsx&quot;" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportCreationPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_StrSummaryReportCreationFilePath" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSheetName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportFileSheetName&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithText">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_VendorCode_Regex_WithText&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithoutText">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_VendorCode_Regex_WithoutText&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
