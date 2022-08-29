@@ -131,12 +131,39 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This flow will iterate through the mails read from outlook, will verify each mails subject and body contains HDFC UTR related search strings and only selects the mail for which the condition is satisfied and downloads attachment. It also reads passwords from Vendor bank accounts excel sheet" DisplayName="Save Attachments From Mails" sap:VirtualizedContainerService.HintSize="379,199" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="GetClientDataWorkFlows\SaveAttachmentsFromMails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+<<<<<<< Updated upstream
         <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="In_ListMailMessages">[ListMailMesaages]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="In_IntUnreadEmailsCount">[IntUnreadEmailsCount]</InArgument>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="Out_DictAttachmentsInfo">[DictAttachmentsInfo]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">[StrDateFolderPath]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DTVendorAccounts">[DTVendorsAccounts]</InArgument>
+=======
+        <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="In_ListMailMessages">
+          <mva:VisualBasicValue x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="ListMailMesaages" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="In_IntUnreadEmailsCount">
+          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="IntUnreadEmailsCount" />
+        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="Out_DictAttachmentsInfo">
+          <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" ExpressionText="DictAttachmentsInfo" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StrDateFolderPath" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DTVendorAccounts">
+          <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DTVendorsAccounts" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strSummaryReportMasterFilePath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportMasterFilePath&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strSummaryReportMasterFileSheetName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString" />
+        </InArgument>
+>>>>>>> Stashed changes
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

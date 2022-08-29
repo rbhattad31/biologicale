@@ -1,15 +1,26 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "eFBHf4e7HQjZETPHDNnD3MPH+bQhx7PH5MeYj4VQpJbWjAOwKKzI73HmXCRgFIJOP+16d4qIqN/lEfItjGaCyA==",
+=======
+  "dgSpecHash": "N+BjCcGh+PjSbcqLqLyr3b1Vu1o+beI8ZIwk4qtLaL6JKLYwOB9knhkpGWuQyM70It+BULi5CHv4rT6yy7qZ0Q==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\BRADSOL\\Documents\\UiPath\\BELtd_HDFC_UTR\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\BRADSOL\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\bitmiracle.docotic.pdf\\7.5.11645\\bitmiracle.docotic.pdf.7.5.11645.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\bitmiracle.libtiff.net\\2.4.649\\bitmiracle.libtiff.net.2.4.649.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\BRADSOL\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
+=======
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\BRADSOL\\.nuget\\packages\\google.apis\\1.55.0\\google.apis.1.55.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\google.apis.auth\\1.55.0\\google.apis.auth.1.55.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\google.apis.calendar.v3.1.55.0.2554.nupkg.sha512",
@@ -81,6 +92,11 @@
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.drawing.primitives\\4.3.0\\system.drawing.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\system.identitymodel.tokens.jwt.6.12.2.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.io.abstractions\\3.0.10\\system.io.abstractions.3.0.10.nupkg.sha512",
+<<<<<<< Updated upstream
+=======
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\system.io.packaging\\4.0.0\\system.io.packaging.4.0.0.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.management.automation\\6.1.7601.17515\\system.management.automation.6.1.7601.17515.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
@@ -90,7 +106,11 @@
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+=======
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\system.text.encoding.codepages\\4.7.1\\system.text.encoding.codepages.4.7.1.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.text.encodings.web\\4.7.1\\system.text.encodings.web.4.7.1.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
@@ -102,7 +122,11 @@
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.connectionclient\\1.3.0\\uipath.connectionclient.1.3.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.documentprocessing.contracts\\1.15.0-preview\\uipath.documentprocessing.contracts.1.15.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.documentunderstanding.digitizer\\2.3.0-preview\\uipath.documentunderstanding.digitizer.2.3.0-preview.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.excel.activities\\2.12.3\\uipath.excel.activities.2.12.3.nupkg.sha512",
+=======
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.excel.activities\\2.14.0-preview\\uipath.excel.activities.2.14.0-preview.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\uipath.imageprocessing.22.4.1.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\uipath.mail.activities.1.16.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.ocr.activities\\3.6.2\\uipath.ocr.activities.3.6.2.nupkg.sha512",

@@ -4,7 +4,11 @@
   "main": "Main.xaml",
   "dependencies": {
     "Microsoft.Activities": "[1.0.1]",
+<<<<<<< Updated upstream
     "UiPath.Excel.Activities": "[2.12.3]",
+=======
+    "UiPath.Excel.Activities": "[2.14.0-preview]",
+>>>>>>> Stashed changes
     "UiPath.Mail.Activities": "[1.16.0-preview]",
     "UiPath.PDF.Activities": "[3.8.0-preview]",
     "UiPath.System.Activities": "[22.4.1]",
