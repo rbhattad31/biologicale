@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-=======
 <Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
->>>>>>> Stashed changes
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -11,15 +7,11 @@
     <x:Property Name="in_SummaryReportPath" Type="InArgument(x:String)" />
     <x:Property Name="in_StrUnprotectedPDFsDateFolderPath" Type="InArgument(x:String)" />
     <x:Property Name="in_strValidatedPDFsSavingDateFolderPath" Type="InArgument(x:String)" />
-<<<<<<< Updated upstream
-  </x:Members>
-=======
     <x:Property Name="in_dtPaymentMasterdata" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <this:Process.in_dtPaymentMasterdata>
     <InArgument x:TypeArguments="sd:DataTable" />
   </this:Process.in_dtPaymentMasterdata>
->>>>>>> Stashed changes
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
@@ -204,12 +196,9 @@
           <InArgument x:TypeArguments="x:String" x:Key="in_ValidationStatusColumnName">
             <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;MasterFileValidationStatusColumnName&quot;).ToString" />
           </InArgument>
-<<<<<<< Updated upstream
-=======
           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtPaymentMasterdata">
             <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtPaymentMasterdata" />
           </InArgument>
->>>>>>> Stashed changes
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

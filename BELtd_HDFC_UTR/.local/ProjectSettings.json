@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-{"ProjectBreakpoints":"{\"Value\":{}}","ProjectWatches":"{\"Value\":[]}","OpenedDocuments":"[\"Framework/Process.xaml\",\"InitializationWorkFlows/GetClientData.xaml\",\"Main.xaml\",\"ProcessWorkFlows/ValidatingPaymentReferenceNumberWithMasterFile.xaml\"]"}
-=======
-{"ProjectBreakpoints":"{\"Value\":{}}","ProjectWatches":"{\"Value\":[]}","OpenedDocuments":"[\"InitializationWorkFlows/GetClientData.xaml\",\"GetClientDataWorkFlows/SaveAttachmentsFromMails.xaml\",\"Main.xaml\"]"}
->>>>>>> Stashed changes
+{"ProjectBreakpoints":"{\"Value\":{}}","ProjectWatches":"{\"Value\":[]}","OpenedDocuments":"[\"Main.xaml\",\"InitializationWorkFlows/GetClientData.xaml\"]"}

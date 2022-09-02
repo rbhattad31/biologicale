@@ -32,18 +32,6 @@
           "lib/net40/BitMiracle.LibTiff.NET.dll": {}
         }
       },
-<<<<<<< Updated upstream
-      "ClosedXML/0.87.1": {
-        "type": "package",
-        "dependencies": {
-          "DocumentFormat.OpenXml": "2.5.0"
-        },
-        "compile": {
-          "lib/net40/_._": {}
-        },
-        "runtime": {
-          "lib/net40/ClosedXML.dll": {}
-=======
       "ClosedXML/0.95.4": {
         "type": "package",
         "dependencies": {
@@ -60,7 +48,6 @@
         },
         "runtime": {
           "lib/net46/ClosedXML.dll": {}
->>>>>>> Stashed changes
         }
       },
       "CsvHelper/16.0.0": {
@@ -76,15 +63,6 @@
           "lib/net45/CsvHelper.dll": {}
         }
       },
-<<<<<<< Updated upstream
-      "DocumentFormat.OpenXml/2.5.0": {
-        "type": "package",
-        "compile": {
-          "lib/_._": {}
-        },
-        "runtime": {
-          "lib/DocumentFormat.OpenXml.dll": {}
-=======
       "DocumentFormat.OpenXml/2.7.2": {
         "type": "package",
         "dependencies": {
@@ -104,7 +82,6 @@
         },
         "runtime": {
           "lib/net20/ExcelNumberFormat.dll": {}
->>>>>>> Stashed changes
         }
       },
       "Google.Apis/1.55.0": {
@@ -1186,8 +1163,6 @@
           "lib/net40/System.IO.Abstractions.dll": {}
         }
       },
-<<<<<<< Updated upstream
-=======
       "System.IO.FileSystem.Primitives/4.0.1": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1216,7 +1191,6 @@
           "lib/net46/System.IO.Packaging.dll": {}
         }
       },
->>>>>>> Stashed changes
       "System.IO.Pipelines/4.7.1": {
         "type": "package",
         "dependencies": {
@@ -1345,13 +1319,6 @@
           "build/net461/_._": {}
         }
       },
-<<<<<<< Updated upstream
-      "System.Text.Encoding.CodePages/4.5.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
-=======
       "System.Text.Encoding.CodePages/4.7.1": {
         "type": "package",
         "dependencies": {
@@ -1361,7 +1328,6 @@
           "System.Core",
           "mscorlib"
         ],
->>>>>>> Stashed changes
         "compile": {
           "lib/net461/_._": {}
         },
@@ -1545,17 +1511,6 @@
           "lib/net461/UiPath.DocumentUnderstanding.Digitizer.dll": {}
         }
       },
-<<<<<<< Updated upstream
-      "UiPath.Excel.Activities/2.12.3": {
-        "type": "package",
-        "dependencies": {
-          "ClosedXML": "0.87.1",
-          "CsvHelper": "15.0.5",
-          "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.5.5",
-          "SharpZipLib": "1.3.3",
-=======
       "UiPath.Excel.Activities/2.14.0-preview": {
         "type": "package",
         "dependencies": {
@@ -1566,7 +1521,6 @@
           "NPOI": "2.5.5",
           "SharpZipLib": "1.3.3",
           "System.Text.Encoding.CodePages": "4.7.1",
->>>>>>> Stashed changes
           "UiPath.Platform": "22.4.0",
           "UiPath.Telemetry.Client": "1.5.3"
         },
@@ -2710,18 +2664,6 @@
           "lib/net40/BitMiracle.LibTiff.NET.dll": {}
         }
       },
-<<<<<<< Updated upstream
-      "ClosedXML/0.87.1": {
-        "type": "package",
-        "dependencies": {
-          "DocumentFormat.OpenXml": "2.5.0"
-        },
-        "compile": {
-          "lib/net40/_._": {}
-        },
-        "runtime": {
-          "lib/net40/ClosedXML.dll": {}
-=======
       "ClosedXML/0.95.4": {
         "type": "package",
         "dependencies": {
@@ -2738,7 +2680,6 @@
         },
         "runtime": {
           "lib/net46/ClosedXML.dll": {}
->>>>>>> Stashed changes
         }
       },
       "CsvHelper/16.0.0": {
@@ -2754,15 +2695,6 @@
           "lib/net45/CsvHelper.dll": {}
         }
       },
-<<<<<<< Updated upstream
-      "DocumentFormat.OpenXml/2.5.0": {
-        "type": "package",
-        "compile": {
-          "lib/_._": {}
-        },
-        "runtime": {
-          "lib/DocumentFormat.OpenXml.dll": {}
-=======
       "DocumentFormat.OpenXml/2.7.2": {
         "type": "package",
         "dependencies": {
@@ -2782,7 +2714,6 @@
         },
         "runtime": {
           "lib/net20/ExcelNumberFormat.dll": {}
->>>>>>> Stashed changes
         }
       },
       "Google.Apis/1.55.0": {
@@ -3861,8 +3792,6 @@
           "lib/net40/System.IO.Abstractions.dll": {}
         }
       },
-<<<<<<< Updated upstream
-=======
       "System.IO.FileSystem.Primitives/4.0.1": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3891,7 +3820,6 @@
           "lib/net46/System.IO.Packaging.dll": {}
         }
       },
->>>>>>> Stashed changes
       "System.IO.Pipelines/4.7.1": {
         "type": "package",
         "dependencies": {
@@ -4014,13 +3942,6 @@
           "build/net461/_._": {}
         }
       },
-<<<<<<< Updated upstream
-      "System.Text.Encoding.CodePages/4.5.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
-=======
       "System.Text.Encoding.CodePages/4.7.1": {
         "type": "package",
         "dependencies": {
@@ -4030,7 +3951,6 @@
           "System.Core",
           "mscorlib"
         ],
->>>>>>> Stashed changes
         "compile": {
           "lib/net461/_._": {}
         },
@@ -4208,17 +4128,6 @@
           "lib/net461/UiPath.DocumentUnderstanding.Digitizer.dll": {}
         }
       },
-<<<<<<< Updated upstream
-      "UiPath.Excel.Activities/2.12.3": {
-        "type": "package",
-        "dependencies": {
-          "ClosedXML": "0.87.1",
-          "CsvHelper": "15.0.5",
-          "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.5.5",
-          "SharpZipLib": "1.3.3",
-=======
       "UiPath.Excel.Activities/2.14.0-preview": {
         "type": "package",
         "dependencies": {
@@ -4229,7 +4138,6 @@
           "NPOI": "2.5.5",
           "SharpZipLib": "1.3.3",
           "System.Text.Encoding.CodePages": "4.7.1",
->>>>>>> Stashed changes
           "UiPath.Platform": "22.4.0",
           "UiPath.Telemetry.Client": "1.5.3"
         },
@@ -5396,23 +5304,6 @@
         "lib/netstandard2.0/BitMiracle.LibTiff.NET.xml"
       ]
     },
-<<<<<<< Updated upstream
-    "ClosedXML/0.87.1": {
-      "sha512": "2LC0T8bu2G2kt34C4Ig87uZfrRO4MwMVI54e2To7m3DvwAs2Z2Ir86WQuUoW8Txo1uNGSfmu3DpfpQhSX0bIww==",
-      "type": "package",
-      "path": "closedxml/0.87.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "closedxml.0.87.1.nupkg.sha512",
-        "closedxml.nuspec",
-        "lib/net35/ClosedXML.dll",
-        "lib/net35/ClosedXML.pdb",
-        "lib/net35/ClosedXML.xml",
-        "lib/net40/ClosedXML.dll",
-        "lib/net40/ClosedXML.pdb",
-        "lib/net40/ClosedXML.xml"
-=======
     "ClosedXML/0.95.4": {
       "sha512": "YixFPzUJ4Ni2AaW/FbPgzFvdtjIzE/4NKROwI1RqIQHWka7QN9Spt4sHuXaSk9PLmXBkk8newHGW0UWLcLs5GA==",
       "type": "package",
@@ -5432,7 +5323,6 @@
         "lib/netstandard2.0/ClosedXML.pdb",
         "lib/netstandard2.0/ClosedXML.xml",
         "nuget-logo.png"
->>>>>>> Stashed changes
       ]
     },
     "CsvHelper/16.0.0": {
@@ -5455,18 +5345,6 @@
         "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
-<<<<<<< Updated upstream
-    "DocumentFormat.OpenXml/2.5.0": {
-      "sha512": "H5jnox0hcLwzAjrpNqDPIItjh7dplF1kk1z8LatpI2h75wBgps1MepEttJFKs7xedQReCMHA0tGpNI0H2B+Mrg==",
-      "type": "package",
-      "path": "documentformat.openxml/2.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "documentformat.openxml.2.5.0.nupkg.sha512",
-        "documentformat.openxml.nuspec",
-        "lib/DocumentFormat.OpenXml.dll"
-=======
     "DocumentFormat.OpenXml/2.7.2": {
       "sha512": "tWT7iu0ab9PNoMTWjv24rt+qnyqvcnPOYs167vPnk4aegAYSAxoUjwNW+VxY8xoLtJntQ/JlWTi7Vt+8TghLlQ==",
       "type": "package",
@@ -5500,7 +5378,6 @@
         "lib/netstandard1.0/ExcelNumberFormat.xml",
         "lib/netstandard2.0/ExcelNumberFormat.dll",
         "lib/netstandard2.0/ExcelNumberFormat.xml"
->>>>>>> Stashed changes
       ]
     },
     "Google.Apis/1.55.0": {
@@ -7485,8 +7362,6 @@
         "system.io.abstractions.nuspec"
       ]
     },
-<<<<<<< Updated upstream
-=======
     "System.IO.FileSystem.Primitives/4.0.1": {
       "sha512": "kWkKD203JJKxJeE74p8aF8y4Qc9r9WQx4C0cHzHPrY3fv/L/IhWnyCHaFJ3H1QPOH6A93whlQ2vG5nHlBDvzWQ==",
       "type": "package",
@@ -7541,7 +7416,6 @@
         "system.io.packaging.nuspec"
       ]
     },
->>>>>>> Stashed changes
     "System.IO.Pipelines/4.7.1": {
       "sha512": "TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
       "type": "package",
@@ -7880,15 +7754,6 @@
         "version.txt"
       ]
     },
-<<<<<<< Updated upstream
-    "System.Text.Encoding.CodePages/4.5.1": {
-      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
-      "type": "package",
-      "path": "system.text.encoding.codepages/4.5.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-=======
     "System.Text.Encoding.CodePages/4.7.1": {
       "sha512": "i2fOvznVVgOOTLUz8FgSap/MsR98I4Iaoz99VXcOW/e7Y2OdY42zhYpBYpZyivk5alYY/UsOWAVswhtjxceodA==",
       "type": "package",
@@ -7897,22 +7762,16 @@
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
->>>>>>> Stashed changes
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Text.Encoding.CodePages.dll",
         "lib/net461/System.Text.Encoding.CodePages.dll",
-<<<<<<< Updated upstream
-        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-=======
         "lib/net461/System.Text.Encoding.CodePages.xml",
         "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
->>>>>>> Stashed changes
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -7924,12 +7783,6 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
-<<<<<<< Updated upstream
-        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
-=======
         "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.xml",
@@ -7937,7 +7790,6 @@
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "system.text.encoding.codepages.4.7.1.nupkg.sha512",
->>>>>>> Stashed changes
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8239,17 +8091,10 @@
         "uipath.documentunderstanding.digitizer.nuspec"
       ]
     },
-<<<<<<< Updated upstream
-    "UiPath.Excel.Activities/2.12.3": {
-      "sha512": "ie20C+AXpGU1meSSv6/QdvJPwiUNySD12IP3S66PGTcVYVF4Wtehy+67FQnSTi524g/w8zrptWxmy6MTt7Upfg==",
-      "type": "package",
-      "path": "uipath.excel.activities/2.12.3",
-=======
     "UiPath.Excel.Activities/2.14.0-preview": {
       "sha512": "m1CewD5boWh883mfey0nn2zOBMXOVzDtiipYkMSsEvrXe8gyb2iYSWM0MDjobA9sZpaDPkb3R4ki6Y+Y/aD8QA==",
       "type": "package",
       "path": "uipath.excel.activities/2.14.0-preview",
->>>>>>> Stashed changes
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8358,11 +8203,7 @@
         "lib/net5.0/tr/UiPath.Excel.resources.dll",
         "lib/net5.0/zh-CN/UiPath.Excel.Activities.resources.dll",
         "lib/net5.0/zh-CN/UiPath.Excel.resources.dll",
-<<<<<<< Updated upstream
-        "uipath.excel.activities.2.12.3.nupkg.sha512",
-=======
         "uipath.excel.activities.2.14.0-preview.nupkg.sha512",
->>>>>>> Stashed changes
         "uipath.excel.activities.nuspec"
       ]
     },
@@ -9830,11 +9671,7 @@
     "": [],
     ".NETFramework,Version=v4.6.1": [
       "Microsoft.Activities >= 1.0.1 <= 1.0.1",
-<<<<<<< Updated upstream
-      "UiPath.Excel.Activities >= 2.12.3 <= 2.12.3",
-=======
       "UiPath.Excel.Activities >= 2.14.0-preview <= 2.14.0-preview",
->>>>>>> Stashed changes
       "UiPath.Mail.Activities >= 1.16.0-preview <= 1.16.0-preview",
       "UiPath.PDF.Activities >= 3.8.0-preview <= 3.8.0-preview",
       "UiPath.System.Activities >= 22.4.1 <= 22.4.1",
@@ -9864,11 +9701,7 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-<<<<<<< Updated upstream
-            "version": "[2.12.3, 2.12.3]"
-=======
             "version": "[2.14.0-preview, 2.14.0-preview]"
->>>>>>> Stashed changes
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
