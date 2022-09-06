@@ -81,7 +81,6 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Get Outlook Emails " sap:VirtualizedContainerService.HintSize="498,1837" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -126,7 +125,7 @@
                 </Assign>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Get Outlook Mail Messages&quot;]" />
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[in_Filter]" />
-                <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" Filter="[in_Filter]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_2" MailFolder="[In_EmailsFolder]" MarkAsRead="True" Messages="[Out_ListMailMessages]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="1000" />
+                <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" DisplayName="Get Outlook Mail Messages" Filter="[in_Filter]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_2" MailFolder="[In_EmailsFolder]" MarkAsRead="True" Messages="[Out_ListMailMessages]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" TimeoutMS="300000" Top="10000" />
                 <Assign DisplayName="Assign ReadMailsSuccess as True if Outlook read mails" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[Bool_ReadMailsSuccess]</OutArgument>
