@@ -85,7 +85,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="94">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -942,9 +942,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1179,3708" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1179,4503" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1133,3564" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1133,4359" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -952,13 +952,13 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="1095,3337" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="1095,4132" sap2010:WorkflowViewState.IdRef="Sequence_49">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[boolInitAllSettingsSuccess = False]" sap:VirtualizedContainerService.HintSize="1053,3245" sap2010:WorkflowViewState.IdRef="If_18">
+                                      <If Condition="[boolInitAllSettingsSuccess = False]" sap:VirtualizedContainerService.HintSize="1053,4040" sap2010:WorkflowViewState.IdRef="If_18">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -970,7 +970,7 @@
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="632,3087" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="632,3882" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -981,7 +981,7 @@
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </ui:InvokeWorkflowFile.Arguments>
                                             </ui:InvokeWorkflowFile>
-                                            <If Condition="[file.Exists(StrSummaryReportSavingPathWithDate)]" DisplayName="Append Summary report to Summary master data if it exists" sap:VirtualizedContainerService.HintSize="590,1890" sap2010:WorkflowViewState.IdRef="If_21">
+                                            <If Condition="[file.Exists(StrSummaryReportSavingPathWithDate)]" DisplayName="Append Summary report to Summary master data if it exists" sap:VirtualizedContainerService.HintSize="590,2350" sap2010:WorkflowViewState.IdRef="If_21">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -989,7 +989,10 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="554,1703" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="554,2163" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="sd:DataTable" Name="dtSummaryReportValidEntries" />
+                                                  </Sequence.Variables>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1024,7 +1027,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:ExcelApplicationScope>
-                                                  <ui:FilterDataTable DataTable="[dtSummaryReport]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="512,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtSummaryReport]" SelectColumnsMode="Keep">
+                                                  <ui:FilterDataTable DataTable="[dtSummaryReport]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="512,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtSummaryReportValidEntries]" SelectColumnsMode="Keep">
                                                     <ui:FilterDataTable.Filters>
                                                       <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                                         <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -1043,8 +1046,8 @@
                                                       </scg:List>
                                                     </ui:FilterDataTable.SelectColumns>
                                                   </ui:FilterDataTable>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Info" Message="[&quot;Number of validated entries in Summary report are: &quot; + dtSummaryReport.Rows.Count.ToString]" />
-                                                  <If Condition="[dtSummaryReport.Rows.Count &gt; 1]" DisplayName="Append summary report to Master file" sap:VirtualizedContainerService.HintSize="512,980" sap2010:WorkflowViewState.IdRef="If_20">
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Info" Message="[&quot;Number of validated entries in Summary report are: &quot; + dtSummaryReportValidEntries.Rows.Count.ToString]" />
+                                                  <If Condition="[dtSummaryReportValidEntries.Rows.Count &gt;= 1]" DisplayName="Append summary report valid entries to Summary Master file" sap:VirtualizedContainerService.HintSize="512,1440" sap2010:WorkflowViewState.IdRef="If_20">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1052,25 +1055,36 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <If.Then>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="476,793" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="476,1253" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,701" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[Config(&quot;SummaryReportMasterFilePath&quot;).ToString]">
+                                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,1161" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[Config(&quot;SummaryReportMasterFilePath&quot;).ToString]">
                                                           <ui:ExcelApplicationScope.Body>
                                                             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                               <ActivityAction.Argument>
                                                                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                                               </ActivityAction.Argument>
-                                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,592" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1052" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="sd:DataTable" Name="dtSummaryMasterFile" />
+                                                                </Sequence.Variables>
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Add empty row at the bottom of summary report datatable so as to have a understanding of data which is appended after previous appending." ArrayRow="[{&quot; &quot;,&quot; &quot;}]" DataTable="[dtSummaryReport]" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                                                                <ui:ExcelReadRange AddHeaders="True" DataTable="[dtSummaryMasterFile]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" SheetName="[Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString]">
+                                                                  <ui:ExcelReadRange.Range>
+                                                                    <InArgument x:TypeArguments="x:String">
+                                                                      <Literal x:TypeArguments="x:String" Value="" />
+                                                                    </InArgument>
+                                                                  </ui:ExcelReadRange.Range>
+                                                                </ui:ExcelReadRange>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_56" Level="Info" Message="[&quot;Number of rows in Summary Report Master File before appending today's summary report validated entries is : &quot; + dtSummaryMasterFile.Rows.Count.ToString]" />
+                                                                <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Add empty row at the bottom of summary report datatable so as to have a understanding of data which is appended after previous appending." ArrayRow="[{&quot; &quot;,&quot; &quot;}]" DataTable="[dtSummaryReportValidEntries]" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1079,8 +1093,16 @@
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                 </ui:AddDataRow>
-                                                                <ui:ExcelAppendRange DataTable="[dtSummaryReport]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_1" SheetName="[Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString]" />
+                                                                <ui:ExcelAppendRange DataTable="[dtSummaryReportValidEntries]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_1" SheetName="[Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString]" />
                                                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_54" Level="Info" Message="[&quot;Today's Summary report data is appended to Summary Report Master file&quot;]" />
+                                                                <ui:ExcelReadRange AddHeaders="True" DataTable="[dtSummaryMasterFile]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" SheetName="[Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString]">
+                                                                  <ui:ExcelReadRange.Range>
+                                                                    <InArgument x:TypeArguments="x:String">
+                                                                      <Literal x:TypeArguments="x:String" Value="" />
+                                                                    </InArgument>
+                                                                  </ui:ExcelReadRange.Range>
+                                                                </ui:ExcelReadRange>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_57" Level="Info" Message="[&quot;Number of rows in Summary Report Master File after appending today's summary report validated entries is : &quot; + dtSummaryMasterFile.Rows.Count.ToString]" />
                                                               </Sequence>
                                                             </ActivityAction>
                                                           </ui:ExcelApplicationScope.Body>
@@ -1145,6 +1167,23 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[item]" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:ForEach.Body>
+                                            </ui:ForEach>
+                                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - delete mails that are saved to send mail notification" sap:VirtualizedContainerService.HintSize="590,295" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Directory.GetFiles(Config(&quot;PasswordNotFoundMailsSavingPath&quot;).ToString)]">
+                                              <ui:ForEach.Body>
+                                                <ActivityAction x:TypeArguments="x:String">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,171" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="[item]" />
                                                   </Sequence>
                                                 </ActivityAction>
                                               </ui:ForEach.Body>

@@ -12,7 +12,7 @@
   <sap:VirtualizedContainerService.HintSize>1240,1244</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="58">
+    <scg:List x:TypeArguments="x:String" Capacity="30">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -88,6 +88,7 @@
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="ListMailMesaages" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Name="DictAttachmentsInfo" />
       <Variable x:TypeArguments="sd:DataTable" Name="DTVendorsAccounts" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" Name="DictAttachmentMails" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,6 +156,9 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_strSummaryReportMasterFileSheetName">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString" />
         </InArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" x:Key="Out_dictAttachmentMails">
+          <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" ExpressionText="DictAttachmentMails" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -199,6 +203,12 @@
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithoutText">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_VendorCode_Regex_WithoutText&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" x:Key="In_dictAttachmentMails">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" ExpressionText="DictAttachmentMails" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
