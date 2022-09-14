@@ -117,12 +117,18 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This flow reads HDFC UTR unread mails from outlook" DisplayName="Get Unread Emails From Outlook " sap:VirtualizedContainerService.HintSize="379,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="GetClientDataWorkFlows\GetOutlookUnreadEmailsFromFolder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="In_EmailsFolder">[in_Config("EmailsFolder").ToString]</InArgument>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="Out_UnreadEmailsCount">[IntUnreadEmailsCount]</OutArgument>
-        <OutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="Out_ListMailMessages">[ListMailMesaages]</OutArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="In_IntRetryCount">[cint(in_Config("RetryCount"))]</InArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Filter">[in_Config("HDFCMailFilter").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_EmailsFolder">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;EmailsFolder&quot;).ToString" />
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="Out_ListMailMessages">
+          <mva:VisualBasicReference x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="ListMailMesaages" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="In_IntRetryCount">
+          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(in_Config(&quot;RetryCount&quot;))" />
+        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -150,15 +156,15 @@
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DTVendorAccounts">
           <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DTVendorsAccounts" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strSummaryReportMasterFilePath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportMasterFilePath&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strSummaryReportMasterFileSheetName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportMasterFileSheetName&quot;).ToString" />
-        </InArgument>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" x:Key="Out_dictAttachmentMails">
           <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" ExpressionText="DictAttachmentMails" />
         </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strVendorMasterFilePath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;MasterFilePath&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strVendorMasterFileSheetName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;MasterSheetName&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -168,48 +174,20 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This flow goes through each pdf in current folder in  attachments folder and removes passwords for whose pdf's password is found correct and extracts Payment reference number and amount from PDFs and updates summary report" DisplayName="Password removal and summary report update" sap:VirtualizedContainerService.HintSize="379,184" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="GetClientDataWorkFlows\PasswordRemovalForPDFsAndUpdateSummaryReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="in_DictAttachmentInfo">
-          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" ExpressionText="DictAttachmentsInfo" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_PasswordRemovedAttachmentsPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_StrUnprotectedPDFsDateFolderPath" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithText">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_PaymentDoc_RegEx_WithText&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithoutText">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_PaymentDoc_RegEx_WithoutText&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithText">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_Amount_RegEx_WithText&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithoutText">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_Amount_RegEx_WithoutText&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StrDateFolderPath" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSavingPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportFileSavingPath&quot;).ToString + System.DateTime.Now.ToString(in_Config(&quot;DateFormat&quot;).ToString) + &quot;.xlsx&quot;" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportCreationPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_StrSummaryReportCreationFilePath" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSheetName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SummaryReportFileSheetName&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithText">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_VendorCode_Regex_WithText&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithoutText">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HDFCUTR_VendorCode_Regex_WithoutText&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-        </InArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" x:Key="In_dictAttachmentMails">
-          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" ExpressionText="DictAttachmentMails" />
-        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="in_DictAttachmentInfo">[DictAttachmentsInfo]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PasswordRemovedAttachmentsPath">[in_StrUnprotectedPDFsDateFolderPath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithText">[in_Config("HDFCUTR_PaymentDoc_RegEx_WithText").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_PaymentDoc_RegEx_WithoutText">[in_Config("HDFCUTR_PaymentDoc_RegEx_WithoutText").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithText">[in_Config("HDFCUTR_Amount_RegEx_WithText").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_Amount_RegEx_WithoutText">[in_Config("HDFCUTR_Amount_RegEx_WithoutText").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">[StrDateFolderPath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSavingPath">[in_Config("SummaryReportFileSavingPath").ToString + System.DateTime.Now.ToString(in_Config("DateFormat").ToString) + ".xlsx"]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportCreationPath">[in_StrSummaryReportCreationFilePath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportSheetName">[in_Config("SummaryReportFileSheetName").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithText">[in_Config("HDFCUTR_VendorCode_Regex_WithText").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HDFCUTR_VendorCode_Regex_WithoutText">[in_Config("HDFCUTR_VendorCode_Regex_WithoutText").ToString]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, snm:MailMessage)" x:Key="In_dictAttachmentMails">[DictAttachmentMails]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

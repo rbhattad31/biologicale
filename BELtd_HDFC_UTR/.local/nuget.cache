@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "N+BjCcGh+PjSbcqLqLyr3b1Vu1o+beI8ZIwk4qtLaL6JKLYwOB9knhkpGWuQyM70It+BULi5CHv4rT6yy7qZ0Q==",
+  "dgSpecHash": "w/eEeGN3A2xJkK2e1a/Yj66CsGpeM7sksWb/JynFHN6lnYklZELh06lwxkSesT5wfRtJ27TrH9yDs12FKvJAnA==",
   "success": true,
   "projectFilePath": "C:\\Users\\BRADSOL\\Documents\\UiPath\\BELtd_HDFC_UTR\\.local\\",
   "expectedPackageFiles": [
@@ -107,7 +107,7 @@
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.documentunderstanding.digitizer\\2.3.0-preview\\uipath.documentunderstanding.digitizer.2.3.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.excel.activities\\2.14.0-preview\\uipath.excel.activities.2.14.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\uipath.imageprocessing.22.4.1.nupkg.sha512",
-    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\uipath.mail.activities.1.16.0-preview.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.mail.activities\\1.17.0-preview\\uipath.mail.activities.1.17.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.ocr.activities\\3.6.2\\uipath.ocr.activities.3.6.2.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.ocr.contracts\\2.12.0-preview\\uipath.ocr.contracts.2.12.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.pdf.activities\\3.8.0-preview\\uipath.pdf.activities.3.8.0-preview.nupkg.sha512",
