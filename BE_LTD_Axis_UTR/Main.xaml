@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1104,1046.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1095.2,1046.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -91,6 +91,7 @@
       <AssemblyReference>Microsoft.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="Process Name :  BE_LTD_Axis_UTR&#xA;&#xA;ProcessDescription :  Bot Will Open Outlook And Read Unread Emails From Outlook and Bot Will Identify Bank Names In Email Body If Any Attachment Is Found Bot Will Save Attachments In Respective Bank Folder With CurrentDate Format, And Also Bot Will Extract Payment Reference Number And Amount For Validating With Master Payment File, The Data Will Matches PDF Will Save In Folder With Current Date&#xA;&#xA;Applications Involed :  Outlook, Excel, PDF&#xA;&#xA;Input : Extracting PaymentReferance number &amp; Amount from PDF file&#xA;&#xA;Output : Validating PaymentReferance number &amp; Amount with Master Payment File&#xA;&#xA;Bot Schedule: NA" DisplayName="BE_LTD_Axis_UTR" sap:VirtualizedContainerService.HintSize="687.2,981.6" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -314,7 +315,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="478.4,496" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="478.4,537.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -383,7 +384,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="478.4,496" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="478.4,537.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -451,7 +452,7 @@
                 <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="448.8,511.2" sap2010:WorkflowViewState.IdRef="Transition_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">303.453333333333,645.066666666667 303.453333333333,676.4 577.6,676.4 577.6,74.7466666666667 476.6,74.7466666666667</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">303.453333333333,645.066666666667 303.453333333333,698.8 580.8,698.8 580.8,74.7466666666667 476.6,74.7466666666667</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">23</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -459,9 +460,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="253.6,105.6" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="648,3816.8" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="603.2,3243.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="603.2,3396.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -469,13 +470,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence sap:VirtualizedContainerService.HintSize="566.4,2988.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                            <Sequence sap:VirtualizedContainerService.HintSize="566.4,3142.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="524.8,2896" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="524.8,3049.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -601,13 +602,29 @@
                                     <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_InputData">[InputDataTable]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Reading_UnreadEmails workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="OutLook\Reading_UnreadEmails.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Reading_Emails workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="OutLook\Reading_Emails.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_UnreadEmailCount">[intUnReadEmailCount]</OutArgument>
-                                    <OutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="out_ListMailMessages">[List_MailMessagese]</OutArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailFolder">[Config("EmailFolder").ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Filter">[Config("Filter").ToString]</InArgument>
+                                    <OutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="out_ListMailMessages">
+                                      <mva:VisualBasicReference x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="List_MailMessagese" />
+                                    </OutArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailFolder">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;EmailFolder&quot;).ToString" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
+                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Filter">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Filter&quot;).ToString" />
+                                    </InArgument>
+                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_EmailsCount">
+                                      <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intEmailCount" />
+                                    </OutArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Days">
+                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;Days&quot;))" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                      <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
+                                    </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -618,12 +635,12 @@
                                 </ui:InvokeWorkflowFile>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GettingBankNameFromEmailBody workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_47" UnSafe="False" WorkflowFileName="OutLook\GettingBankNameFromEmailBody.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_UnreadEmailsCount">[intUnReadEmailCount]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_BankNames">[Config("BankName").ToString]</InArgument>
                                     <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="in_ListMailMessages">[List_MailMessagese]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_CurrentDateFolderPath">[CurrentDateFolderPath]</InArgument>
                                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[Config("VendorPaymentsFileName").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_EmailsCount">[intEmailCount]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -632,6 +649,12 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke MovingValidationFailedPDFToCurrentDateFolder workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_61" UnSafe="False" WorkflowFileName="MovingValidationFailedPDFToCurrentDateFolder.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_ValidationFailedPath">[Config("ValidationFailedPDFPath").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_CurrentDateFolder">[CurrentDateFolderPath]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke AppendingVendorData" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\AppendingVendorData\Main.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_MasterFilePath">[Nothing]</InArgument>
@@ -639,7 +662,6 @@
                                     <InArgument x:TypeArguments="x:String" x:Key="in_MailFolder">[Config("EmailFolder").ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_VendorFileSavingPath">[CurrentDateFolderPath]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_MasterSheetName">[Config("MasterSheetName").ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_SheetName">[Config("SheetName").ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_MasterFileFullPath">[Config("MasterFilePath").ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_VendorFilePath">[CurrentDateFolderPath]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[Config("VendorPaymentsFileName").ToString]</InArgument>
@@ -672,11 +694,12 @@
                                     <InArgument x:TypeArguments="x:String" x:Key="in_FinalSummaryReportPath">[Config("FinalSummaryReportFilePath").ToString]</InArgument>
                                     <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtInputData">[InputDataTable]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_SheetName">[Config("SheetName").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_VendorCode">[Config("VendorCode").ToString]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                                   <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="271.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -706,7 +729,7 @@
                                 </ui:CommentOut>
                                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                                   <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="299.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1155,7 +1178,7 @@
       <Variable x:TypeArguments="sd:DataTable" Name="InputDataTable" />
       <Variable x:TypeArguments="x:String" Name="SumarryReportPath" />
       <Variable x:TypeArguments="x:String" Name="strPdfCurrentDateFolder" />
-      <Variable x:TypeArguments="x:Int32" Name="intUnReadEmailCount" />
+      <Variable x:TypeArguments="x:Int32" Name="intEmailCount" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="List_MailMessagese" />
       <Variable x:TypeArguments="x:String" Name="VendorFilePath" />
     </StateMachine.Variables>

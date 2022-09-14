@@ -1,19 +1,19 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GettingBankNameFromEmailBody" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_UnreadEmailsCount" Type="InArgument(x:Int32)" />
     <x:Property Name="in_BankNames" Type="InArgument(x:String)" />
     <x:Property Name="in_ListMailMessages" Type="InArgument(scg:List(snm:MailMessage))" />
     <x:Property Name="in_CurrentDateFolderPath" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_FileName" Type="InArgument(x:String)" />
+    <x:Property Name="in_EmailsCount" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1826.4,3932.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1606.4,5311.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GettingBankNameFromEmailBody_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="82">
+    <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -59,7 +59,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="39">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -98,13 +98,13 @@
       <AssemblyReference>Microsoft.Activities</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GettingBankNameFromEmail" sap:VirtualizedContainerService.HintSize="1836.8,3868" sap2010:WorkflowViewState.IdRef="Sequence_33">
+  <Sequence DisplayName="GettingBankNameFromEmail" sap:VirtualizedContainerService.HintSize="1616.8,5246.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="list_AttachmentNotFound" />
       <Variable x:TypeArguments="s:String[]" Name="MailAttachmentPath" />
+      <Variable x:TypeArguments="x:Int32" Name="intTodayMailsCounter" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -112,7 +112,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="GettingBankNameFromEmailBody" sap:VirtualizedContainerService.HintSize="1795.2,3682.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence DisplayName="GettingBankNameFromEmailBody" sap:VirtualizedContainerService.HintSize="1575.2,5060.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:String[]" Name="strBankNames" />
         <Variable x:TypeArguments="x:String" Name="strBankFolderFullPath" />
@@ -124,9 +124,9 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1753.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;GettingBankNameFromEmailBody Xmal file execution started&quot;]" />
-      <ui:LogMessage DisplayName="Log Message 'Unread Emails Count'" sap:VirtualizedContainerService.HintSize="1753.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[in_UnreadEmailsCount]" />
-      <If Condition="[in_UnreadEmailsCount&gt;0]" DisplayName="If 'Unread Emails Validating'" sap:VirtualizedContainerService.HintSize="1753.6,3191.2" sap2010:WorkflowViewState.IdRef="If_3">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1533.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;GettingBankNameFromEmailBody Xmal file execution started&quot;]" />
+      <ui:LogMessage DisplayName="Log Message 'Emails Count'" sap:VirtualizedContainerService.HintSize="1533.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[in_EmailsCount]" />
+      <If Condition="[in_EmailsCount&gt;0]" DisplayName="If 'Emails Validating'" sap:VirtualizedContainerService.HintSize="1533.6,4569.6" sap2010:WorkflowViewState.IdRef="If_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,15 +134,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="UnreadEmailsFound" sap:VirtualizedContainerService.HintSize="1468,3032" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="EmailsFound" sap:VirtualizedContainerService.HintSize="1248,4410.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message 'Unread Emails Found'" sap:VirtualizedContainerService.HintSize="1426.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Unread Emails Found&quot;]" />
-            <Assign sap:VirtualizedContainerService.HintSize="1426.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <ui:LogMessage DisplayName="Log Message 'Emails Found'" sap:VirtualizedContainerService.HintSize="1206.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Emails Found&quot;]" />
+            <Assign sap:VirtualizedContainerService.HintSize="1206.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:List(snm:MailMessage)">[list_AttachmentNotFound]</OutArgument>
               </Assign.To>
@@ -150,20 +150,128 @@
                 <InArgument x:TypeArguments="scg:List(snm:MailMessage)">[new List(of System.net.mail.MailMessage)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each 'List Mail Messages'" sap:VirtualizedContainerService.HintSize="1426.4,1333.6" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[in_ListMailMessages]">
+            <Assign sap:VirtualizedContainerService.HintSize="1206.4,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[intTodayMailsCounter]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each 'List Mail Messages'" sap:VirtualizedContainerService.HintSize="1206.4,2073.6" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[in_ListMailMessages]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="snm:MailMessage">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="item" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1391.2,1208.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1171.2,1948.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[item.Body.Contains(in_BankNames)]" DisplayName="If 'Checking Body Contains Bank Name Or Not'" sap:VirtualizedContainerService.HintSize="1349.6,1116" sap2010:WorkflowViewState.IdRef="If_7">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1129.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Info" Message="[System.DateTime.Now.ToShortDateString + &quot;::&quot;+CDate(item.Headers(&quot;DateReceived&quot;)).ToShortDateString]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1129.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[System.DateTime.Now.ToShortDateString = CDate(item.Headers(&quot;DateReceived&quot;)).ToShortDateString]" />
+                    <If Condition="[System.DateTime.Now.ToShortDateString = CDate(item.Headers(&quot;DateReceived&quot;)).ToShortDateString]" sap:VirtualizedContainerService.HintSize="1129.6,341.6" sap2010:WorkflowViewState.IdRef="If_11">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[intTodayMailsCounter]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[intTodayMailsCounter+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1129.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[item.ToString.Contains(strTodayDate)]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Today Date Mails Is Found&quot;]" />
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="420,339.2" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Today Date Mails Not Found&quot;]" />
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("CurrentDateMailsNotFoundBody").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("CurrentDateMailsNotFoundSubject").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("ToEmailAdress").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("Mail_Environment").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(in_Config("RetryCount"))]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <If Condition="[item.Body.Contains(in_BankNames)]" DisplayName="If 'Checking Body Contains Bank Name Or Not'" sap:VirtualizedContainerService.HintSize="1129.6,1116" sap2010:WorkflowViewState.IdRef="If_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="885.6,956.8" sap2010:WorkflowViewState.IdRef="Sequence_40">
                           <sap:WorkflowViewStateService.ViewState>
@@ -264,10 +372,10 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="420,401.6" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <Sequence DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -304,7 +412,47 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <If Condition="[list_AttachmentNotFound.Any]" sap:VirtualizedContainerService.HintSize="1426.4,1332.8" sap2010:WorkflowViewState.IdRef="If_8">
+            <If Condition="[intTodayMailsCounter = 0]" sap:VirtualizedContainerService.HintSize="1206.4,498.4" sap2010:WorkflowViewState.IdRef="If_12">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="420,339.2" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Info" Message="[&quot;No Axis UTR Mails Received Today&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("CurrentDateMailsNotFoundBody").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("CurrentDateMailsNotFoundSubject").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("ToEmailAdress").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("Mail_Environment").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(in_Config("RetryCount"))]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;Axis UTR Mails Received Today&quot;]" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[list_AttachmentNotFound.Any]" sap:VirtualizedContainerService.HintSize="1206.4,1332.8" sap2010:WorkflowViewState.IdRef="If_8">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="552,1144" sap2010:WorkflowViewState.IdRef="Sequence_49">
                   <sap:WorkflowViewStateService.ViewState>
@@ -330,7 +478,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[MailAttachmentPath]" Body="[in_Config(&quot;AttachmentsNotFoundBody&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;AttachmentsNotFoundSubject&quot;).ToString]" To="[in_Config(&quot;ToEmailAdress&quot;).ToString]">
+                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[MailAttachmentPath]" Body="[in_Config(&quot;AttachmentsNotFoundBody&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;AttachmentsNotFoundSubject&quot;).ToString]" To="[in_Config(&quot;ToEmailAdress&quot;).ToString]">
                             <ui:SendOutlookMail.Files>
                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                             </ui:SendOutlookMail.Files>
@@ -376,46 +524,63 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence sap:VirtualizedContainerService.HintSize="241.6,161.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <Sequence sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="UnreadEmailsNotFound" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,161.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="UnreadEmailsNotFound" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message 'Unread Emails Not Found'" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Unread Emails Not Found&quot;]" />
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("UnreadEmailsNotfoundBody").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("UnreadEmailsNotfoundSubject").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("ToEmailAdress").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("Mail_Environment").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(in_Config("RetryCount"))]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <Throw Exception="[New BusinessRuleException(&quot;No UnreadEmails Found&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message 'Unread Emails Not Found'" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Unread Emails Not Found&quot;]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("UnreadEmailsNotfoundBody").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("UnreadEmailsNotfoundSubject").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("ToEmailAdress").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("Mail_Environment").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
-                  <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(in_Config("RetryCount"))]</InArgument>
-                </ui:InvokeWorkflowFile.Arguments>
-              </ui:InvokeWorkflowFile>
-              <Throw Exception="[New BusinessRuleException(&quot;No UnreadEmails Found&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_7" />
-            </Sequence>
+            </ui:CommentOut>
           </Sequence>
         </If.Else>
       </If>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1753.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;GettingBankNameFromEmailBody Xmal file execution Ended&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="914.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;GettingBankNameFromEmailBody Xmal file execution Ended&quot;]" />
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1795.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="956,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="478.4,145.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
           <sap:WorkflowViewStateService.ViewState>

@@ -1486,7 +1486,7 @@
           "build/_._": {}
         }
       },
-      "UiPath.Activities.RuntimeGovernance/1.1.3": {
+      "UiPath.Activities.RuntimeGovernance/1.1.6": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -1840,7 +1840,7 @@
           "lib/net461/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.15.2": {
+      "UiPath.Mail.Activities/1.17.0-preview": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
@@ -1854,7 +1854,7 @@
           "Newtonsoft.Json": "13.0.1",
           "System.IdentityModel.Tokens.Jwt": "6.12.2",
           "System.ValueTuple": "4.5.0",
-          "UiPath.Activities.RuntimeGovernance": "1.1.3",
+          "UiPath.Activities.RuntimeGovernance": "1.1.6",
           "UiPath.ConnectionClient": "1.3.0",
           "UiPath.Platform": "22.4.0",
           "UiPath.Telemetry.Client": "1.5.3"
@@ -1868,7 +1868,6 @@
           "lib/net461/Microsoft.Office.Interop.Word.dll": {},
           "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Mail.Activities.Design.dll": {},
-          "lib/net461/UiPath.Mail.Activities.Package.dll": {},
           "lib/net461/UiPath.Mail.Activities.dll": {},
           "lib/net461/UiPath.Mail.dll": {},
           "lib/net461/UiPath.MainSessionServer.Shared.dll": {}
@@ -4656,7 +4655,7 @@
           "build/_._": {}
         }
       },
-      "UiPath.Activities.RuntimeGovernance/1.1.3": {
+      "UiPath.Activities.RuntimeGovernance/1.1.6": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -5010,7 +5009,7 @@
           "lib/net461/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.15.2": {
+      "UiPath.Mail.Activities/1.17.0-preview": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
@@ -5024,7 +5023,7 @@
           "Newtonsoft.Json": "13.0.1",
           "System.IdentityModel.Tokens.Jwt": "6.12.2",
           "System.ValueTuple": "4.5.0",
-          "UiPath.Activities.RuntimeGovernance": "1.1.3",
+          "UiPath.Activities.RuntimeGovernance": "1.1.6",
           "UiPath.ConnectionClient": "1.3.0",
           "UiPath.Platform": "22.4.0",
           "UiPath.Telemetry.Client": "1.5.3"
@@ -5038,7 +5037,6 @@
           "lib/net461/Microsoft.Office.Interop.Word.dll": {},
           "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Mail.Activities.Design.dll": {},
-          "lib/net461/UiPath.Mail.Activities.Package.dll": {},
           "lib/net461/UiPath.Mail.Activities.dll": {},
           "lib/net461/UiPath.Mail.dll": {},
           "lib/net461/UiPath.MainSessionServer.Shared.dll": {}
@@ -9205,17 +9203,17 @@
         "uipath.nuspec"
       ]
     },
-    "UiPath.Activities.RuntimeGovernance/1.1.3": {
-      "sha512": "grF+nXXiCuzaSIBT3z/W6o7QMW7B/qHxUAFYeFpOohcwuh1GLLbuZ0jbyVHIwsj5FaQIv5nMd5JUbWjPlHLCQQ==",
+    "UiPath.Activities.RuntimeGovernance/1.1.6": {
+      "sha512": "y9q2bavqIkAngr1sTX6YYmenmq5aCqjRgNEDxy5UuVZOP0pFnGNmaxRtYqSPJLBVBFzyxPa4B1Ox0c23ueta7w==",
       "type": "package",
-      "path": "uipath.activities.runtimegovernance/1.1.3",
+      "path": "uipath.activities.runtimegovernance/1.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.Activities.RuntimeGovernance.dll",
         "lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
         "lib/net5.0/UiPath.Activities.RuntimeGovernance.dll",
-        "uipath.activities.runtimegovernance.1.1.3.nupkg.sha512",
+        "uipath.activities.runtimegovernance.1.1.6.nupkg.sha512",
         "uipath.activities.runtimegovernance.nuspec"
       ]
     },
@@ -9733,10 +9731,10 @@
         "uipath.imageprocessing.nuspec"
       ]
     },
-    "UiPath.Mail.Activities/1.15.2": {
-      "sha512": "CdfEiFSMyPF9B8lUMAzoKLzV/002CWDI5Ixm4k0FnQjtegv9G1nVkcTX6NVm4R9SdFJ1/ijXX8tmXri3+nqTxQ==",
+    "UiPath.Mail.Activities/1.17.0-preview": {
+      "sha512": "MwItsqyZbyWVnr6LY9AekWmW8HYXUhm9d2Rz405ulLgaCEebup1P8lzj1UfB324l50yT/rkNmoDkpmbj9fAgzg==",
       "type": "package",
-      "path": "uipath.mail.activities/1.15.2",
+      "path": "uipath.mail.activities/1.17.0-preview",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -9746,7 +9744,6 @@
         "lib/net461/Microsoft.Office.Interop.Word.dll",
         "lib/net461/Office.dll",
         "lib/net461/UiPath.Mail.Activities.Design.dll",
-        "lib/net461/UiPath.Mail.Activities.Package.dll",
         "lib/net461/UiPath.Mail.Activities.Package.pdb",
         "lib/net461/UiPath.Mail.Activities.dll",
         "lib/net461/UiPath.Mail.dll",
@@ -9784,79 +9781,77 @@
         "lib/net461/zh-CN/UiPath.Mail.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Mail.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/Interop.Domino.UiPath.dll",
-        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "lib/net5.0-windows7.0/Office.dll",
-        "lib/net5.0-windows7.0/UiPath.Mail.Activities.Design.dll",
-        "lib/net5.0-windows7.0/UiPath.Mail.Activities.Package.dll",
-        "lib/net5.0-windows7.0/UiPath.Mail.Activities.Package.pdb",
-        "lib/net5.0-windows7.0/UiPath.Mail.Activities.dll",
-        "lib/net5.0-windows7.0/UiPath.Mail.dll",
-        "lib/net5.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Mail.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Mail.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Mail.resources.dll",
-        "lib/net5.0/Interop.Domino.UiPath.dll",
-        "lib/net5.0/Microsoft.Office.Interop.Outlook.dll",
-        "lib/net5.0/Microsoft.Office.Interop.Word.dll",
-        "lib/net5.0/Office.dll",
-        "lib/net5.0/UiPath.Mail.Activities.Package.dll",
-        "lib/net5.0/UiPath.Mail.Activities.Package.pdb",
-        "lib/net5.0/UiPath.Mail.Activities.dll",
-        "lib/net5.0/UiPath.Mail.dll",
-        "lib/net5.0/de/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/de/UiPath.Mail.resources.dll",
-        "lib/net5.0/es-MX/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/es-MX/UiPath.Mail.resources.dll",
-        "lib/net5.0/es/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/es/UiPath.Mail.resources.dll",
-        "lib/net5.0/fr/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/fr/UiPath.Mail.resources.dll",
-        "lib/net5.0/ja/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/ja/UiPath.Mail.resources.dll",
-        "lib/net5.0/ko/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/ko/UiPath.Mail.resources.dll",
-        "lib/net5.0/pt-BR/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/pt-BR/UiPath.Mail.resources.dll",
-        "lib/net5.0/pt/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/pt/UiPath.Mail.resources.dll",
-        "lib/net5.0/ru/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/ru/UiPath.Mail.resources.dll",
-        "lib/net5.0/tr/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/tr/UiPath.Mail.resources.dll",
-        "lib/net5.0/zh-CN/UiPath.Mail.Activities.resources.dll",
-        "lib/net5.0/zh-CN/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "lib/net6.0-windows7.0/Office.dll",
+        "lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Mail.Activities.Package.pdb",
+        "lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
+        "lib/net6.0-windows7.0/UiPath.Mail.dll",
+        "lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Mail.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Mail.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Mail.resources.dll",
+        "lib/net6.0/Interop.Domino.UiPath.dll",
+        "lib/net6.0/Microsoft.Office.Interop.Outlook.dll",
+        "lib/net6.0/Microsoft.Office.Interop.Word.dll",
+        "lib/net6.0/Office.dll",
+        "lib/net6.0/UiPath.Mail.Activities.Package.pdb",
+        "lib/net6.0/UiPath.Mail.Activities.dll",
+        "lib/net6.0/UiPath.Mail.dll",
+        "lib/net6.0/de/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/de/UiPath.Mail.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Mail.resources.dll",
+        "lib/net6.0/es/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/es/UiPath.Mail.resources.dll",
+        "lib/net6.0/fr/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/fr/UiPath.Mail.resources.dll",
+        "lib/net6.0/ja/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/ja/UiPath.Mail.resources.dll",
+        "lib/net6.0/ko/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/ko/UiPath.Mail.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Mail.resources.dll",
+        "lib/net6.0/pt/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/pt/UiPath.Mail.resources.dll",
+        "lib/net6.0/ru/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/ru/UiPath.Mail.resources.dll",
+        "lib/net6.0/tr/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/tr/UiPath.Mail.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Mail.Activities.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Mail.resources.dll",
         "tools/net461/MainSessionServer/Microsoft.Bcl.AsyncInterfaces.dll",
         "tools/net461/MainSessionServer/Microsoft.Extensions.Configuration.Abstractions.dll",
         "tools/net461/MainSessionServer/Microsoft.Extensions.Configuration.Binder.dll",
@@ -10006,7 +10001,7 @@
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.dll",
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.pdb",
         "tools/net461/MainSessionServer/netstandard.dll",
-        "uipath.mail.activities.1.15.2.nupkg.sha512",
+        "uipath.mail.activities.1.17.0-preview.nupkg.sha512",
         "uipath.mail.activities.nuspec"
       ]
     },
@@ -11754,7 +11749,7 @@
       "Microsoft.Identity.Client.Desktop >= 4.45.0 <= 4.45.0",
       "UiPath.Excel.Activities >= 2.12.3 <= 2.12.3",
       "UiPath.Form.Activities >= 2.0.1-preview <= 2.0.1-preview",
-      "UiPath.Mail.Activities >= 1.15.2 <= 1.15.2",
+      "UiPath.Mail.Activities >= 1.17.0-preview <= 1.17.0-preview",
       "UiPath.PDF.Activities >= 3.7.1-preview <= 3.7.1-preview",
       "UiPath.Persistence.Activities >= 1.4.1 <= 1.4.1",
       "UiPath.Presentations.Activities >= 1.3.4 <= 1.3.4",
@@ -11811,7 +11806,7 @@
           "UiPath.Mail.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.15.2, 1.15.2]"
+            "version": "[1.17.0-preview, 1.17.0-preview]"
           },
           "UiPath.PDF.Activities": {
             "include": "Runtime",

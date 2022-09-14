@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+ZcsOPjLiZoE2+gNuoD39/yZRe0do1DNc3I8GoQSwEyG9sZwj1vjXOEqimXZZl4J4UnOXCm5TSvOVJkiaq8+Yg==",
+  "dgSpecHash": "j6qxF98QQyJXWd54RrdVHxERXkwblNSRH4+r5ouTkeS7VpATayAof6Udymbj72a4I35D/kOyRyzEprrnS9CYXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\BRADSOL\\Documents\\UiPath\\BE_LTD_Axis_UTR\\.local\\",
   "expectedPackageFiles": [
@@ -105,7 +105,7 @@
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath\\22.4.38.42025\\uipath.22.4.38.42025.nupkg.sha512",
-    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.3\\uipath.activities.runtimegovernance.1.1.3.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\uipath.activities.runtimegovernance.1.1.6.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.connectionclient\\1.3.0\\uipath.connectionclient.1.3.0.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.documentprocessing.contracts\\1.15.0-preview\\uipath.documentprocessing.contracts.1.15.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.documentunderstanding.digitizer\\2.1.1-preview\\uipath.documentunderstanding.digitizer.2.1.1-preview.nupkg.sha512",
@@ -114,7 +114,7 @@
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.1-preview\\uipath.formactivitylibrary.2.0.1-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.1-preview\\uipath.formactivitylibrary.contracts.2.0.1-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\uipath.imageprocessing.22.4.1.nupkg.sha512",
-    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.mail.activities\\1.15.2\\uipath.mail.activities.1.15.2.nupkg.sha512",
+    "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.mail.activities\\1.17.0-preview\\uipath.mail.activities.1.17.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.ocr.activities\\3.6.2\\uipath.ocr.activities.3.6.2.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.ocr.contracts\\2.12.0-preview\\uipath.ocr.contracts.2.12.0-preview.nupkg.sha512",
     "C:\\Users\\BRADSOL\\.nuget\\packages\\uipath.pdf.activities\\3.7.1-preview\\uipath.pdf.activities.3.7.1-preview.nupkg.sha512",

@@ -9,7 +9,7 @@
     "Microsoft.Identity.Client.Desktop": "[4.45.0]",
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Form.Activities": "[2.0.1-preview]",
-    "UiPath.Mail.Activities": "[1.15.2]",
+    "UiPath.Mail.Activities": "[1.17.0-preview]",
     "UiPath.PDF.Activities": "[3.7.1-preview]",
     "UiPath.Persistence.Activities": "[1.4.1]",
     "UiPath.Presentations.Activities": "[1.3.4]",
