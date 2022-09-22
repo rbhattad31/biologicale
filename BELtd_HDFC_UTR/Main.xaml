@@ -527,7 +527,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="702,5477" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,103" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="656,5059" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -796,36 +796,20 @@
                                     </ui:InvokeWorkflowFile>
                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="498,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_66" UnSafe="False" WorkflowFileName="InitializationWorkFlows\VendorsBankAccountsFileDownload.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-                                        </InArgument>
-                                        <OutArgument x:TypeArguments="x:String" x:Key="out_strVendorBankAccountsFilePath">
-                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strVendorBankAccountsFilePath" />
-                                        </OutArgument>
+                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="out_strVendorBankAccountsFilePath">[strVendorBankAccountsFilePath]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <TryCatch DisplayName="Try Catch " sap:VirtualizedContainerService.HintSize="498,396" sap2010:WorkflowViewState.IdRef="TryCatch_19">
                                       <TryCatch.Try>
                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This flow contains all the subflows that gets data from outlook, read from pdfs and updates summary report with the details and other related tasks" DisplayName="Invoke GetCllientData workflow" sap:VirtualizedContainerService.HintSize="336,169" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="InitializationWorkFlows\GetClientData.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
-                                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                              <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">
-                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StrAttachmentsSavingDateFolderPath" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_StrUnprotectedPDFsDateFolderPath">
-                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StrUnprotectedPDFsDateFolderPath" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportCreationFilePath">
-                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StrSummaryFileCreationPathWithDate" />
-                                            </InArgument>
-                                            <OutArgument x:TypeArguments="x:String" x:Key="out_StrSummaryReportSavingFilePath">
-                                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="StrSummaryReportSavingPathWithDate" />
-                                            </OutArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_strVendorBankAccountsFilePath">
-                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strVendorBankAccountsFilePath" />
-                                            </InArgument>
+                                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_StrDateFolderPath">[StrAttachmentsSavingDateFolderPath]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_StrUnprotectedPDFsDateFolderPath">[StrUnprotectedPDFsDateFolderPath]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_StrSummaryReportCreationFilePath">[StrSummaryFileCreationPathWithDate]</InArgument>
+                                            <OutArgument x:TypeArguments="x:String" x:Key="out_StrSummaryReportSavingFilePath">[StrSummaryReportSavingPathWithDate]</OutArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_strVendorBankAccountsFilePath">[strVendorBankAccountsFilePath]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -959,9 +943,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,119" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1492,3274" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1446,3452" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1446,3130" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -969,13 +953,13 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="1408,3225" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="1408,2903" sap2010:WorkflowViewState.IdRef="Sequence_49">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[boolInitAllSettingsSuccess = False]" sap:VirtualizedContainerService.HintSize="1366,3133" sap2010:WorkflowViewState.IdRef="If_18">
+                                      <If Condition="[boolInitAllSettingsSuccess = False]" sap:VirtualizedContainerService.HintSize="1366,2811" sap2010:WorkflowViewState.IdRef="If_18">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -987,7 +971,7 @@
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="945,2975" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="945,2653" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:Boolean" Name="boolFlowSuccess" />
                                             </Sequence.Variables>
@@ -1120,23 +1104,40 @@
                                                 </ActivityAction>
                                               </ui:ForEach.Body>
                                             </ui:ForEach>
-                                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="903,373" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[Directory.GetFiles(StrAttachmentsSavingDateFolderPath)]">
-                                              <ui:ForEach.Body>
-                                                <ActivityAction x:TypeArguments="x:String">
-                                                  <ActivityAction.Argument>
-                                                    <DelegateInArgument x:TypeArguments="x:String" Name="item" />
-                                                  </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,249" sap2010:WorkflowViewState.IdRef="Sequence_81">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Config(&quot;ValidationFailedAttachmentsSavingPath&quot;).ToString]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[item]" />
-                                                  </Sequence>
-                                                </ActivityAction>
-                                              </ui:ForEach.Body>
-                                            </ui:ForEach>
+                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="903,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                              <ui:CommentOut.Body>
+                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="554,464" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512,372" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[Directory.GetFiles(StrAttachmentsSavingDateFolderPath)]">
+                                                    <ui:ForEach.Body>
+                                                      <ActivityAction x:TypeArguments="x:String">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,249" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Config(&quot;ValidationFailedAttachmentsSavingPath&quot;).ToString]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[item]" />
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:ForEach.Body>
+                                                  </ui:ForEach>
+                                                </Sequence>
+                                              </ui:CommentOut.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:CommentOut>
                                             <If Condition="[boolFlowSuccess]" DisplayName="If flow success" sap:VirtualizedContainerService.HintSize="903,362" sap2010:WorkflowViewState.IdRef="If_23">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_78">

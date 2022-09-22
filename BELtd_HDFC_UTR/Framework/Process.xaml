@@ -194,6 +194,9 @@
           <InArgument x:TypeArguments="x:String" x:Key="in_MasterFilePath">
             <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;MasterFilePath&quot;).ToString" />
           </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ValidationFailedAttachmentsSavingPath">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ValidationFailedAttachmentsSavingPath&quot;).ToString" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
