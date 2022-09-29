@@ -59,7 +59,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -98,6 +98,7 @@
       <AssemblyReference>Microsoft.Activities</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="GettingBankNameFromEmail" sap:VirtualizedContainerService.HintSize="1616.8,5246.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
@@ -382,19 +383,45 @@
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Axis Related Mails Not Found In The Email&quot;]" />
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("AxisUtrProcessUnreadEmailsNotFoundBody").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("AxisUtrProcessUnreadEmailsNotFoundSubject").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("ToEmailAdress").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("Mail_Environment").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;AxisUtrProcessUnreadEmailsNotFoundBody&quot;).ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;AxisUtrProcessUnreadEmailsNotFoundSubject&quot;).ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ToEmailCc&quot;).ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ToEmailAdress&quot;).ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Mail_Environment&quot;).ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_username">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Password">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                              </InArgument>
                               <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries" />
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
@@ -423,20 +450,48 @@
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Info" Message="[&quot;No Axis UTR Mails Received Today&quot;]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("CurrentDateMailsNotFoundBody").ToString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("CurrentDateMailsNotFoundSubject").ToString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("ToEmailAdress").ToString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("Mail_Environment").ToString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(in_Config("RetryCount"))]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;CurrentDateMailsNotFoundBody&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;CurrentDateMailsNotFoundSubject&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ToEmailCc&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ToEmailAdress&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Mail_Environment&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_username">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Password">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
+                        <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(in_Config(&quot;RetryCount&quot;))" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
@@ -478,7 +533,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[MailAttachmentPath]" Body="[in_Config(&quot;AttachmentsNotFoundBody&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;AttachmentsNotFoundSubject&quot;).ToString]" To="[in_Config(&quot;ToEmailAdress&quot;).ToString]">
+                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" AttachmentsCollection="[MailAttachmentPath]" Body="[in_Config(&quot;AttachmentsNotFoundBody&quot;).ToString]" Cc="[in_Config(&quot;ToEmailCc&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;AttachmentsNotFoundSubject&quot;).ToString]" To="[in_Config(&quot;ToEmailAdress&quot;).ToString]">
                             <ui:SendOutlookMail.Files>
                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                             </ui:SendOutlookMail.Files>
