@@ -194,7 +194,7 @@
           <OutArgument x:TypeArguments="scg:List(sd:DataRow)">[strMasterFileCount]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="scg:List(sd:DataRow)">[(From d1 In dtMasterData.AsEnumerable Where d1(1).ToString.Trim=in_PaymentReferanceNumber.ToString.Trim And d1(10).ToString.trim=in_Amount.ToString.Trim And d1(5).ToString.Trim=in_VendorCode.ToString.Trim and Not String.IsNullOrEmpty(d1(13).ToString) Select d1).ToList]</InArgument>
+          <InArgument x:TypeArguments="scg:List(sd:DataRow)">[(From d1 In dtMasterData.AsEnumerable Where d1(1).ToString.Trim=in_PaymentReferanceNumber.ToString.Trim And d1(10).ToString.trim=in_Amount.ToString.Trim And d1(5).ToString.Trim=in_VendorCode.ToString.Trim and Not String.IsNullOrEmpty(d1(14).ToString) Select d1).ToList]</InArgument>
         </Assign.Value>
       </Assign>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1255.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[strMasterFileCount.Count]" />
@@ -230,7 +230,7 @@
             <ui:WriteCell Cell="[&quot;G&quot;+(in_TransactionNumber+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_46" SheetName="[in_SheetName]" Text="This Record Processed Earlier" WorkbookPath="[in_SummaryReportPath]" />
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_36">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="660.8,732.8" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -315,8 +315,8 @@
                   <ui:WriteCell Cell="[&quot;G&quot;+(in_TransactionNumber+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_48" SheetName="[in_SheetName]" Text="Validation Success" WorkbookPath="[in_SummaryReportPath]" />
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Info" Message="[&quot;H&quot;+(in_TransactionNumber+1).ToString]" />
                   <ui:WriteCell Cell="[&quot;H&quot;+(in_TransactionNumber+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_49" SheetName="[in_SheetName]" Text="[in_PaymentReferanceNumber]" WorkbookPath="[in_SummaryReportPath]" />
-                  <ui:WriteCell Cell="[&quot;N&quot;+(indexRow+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_50" SheetName="[in_MasterSheetName]" Text="Yes" WorkbookPath="[in_MasterFile]" />
-                  <ui:WriteCell Cell="[&quot;O&quot;+(indexRow+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_52" SheetName="[in_MasterSheetName]" Text="[in_AttachmentName]" WorkbookPath="[in_MasterFile]" />
+                  <ui:WriteCell Cell="[&quot;O&quot;+(indexRow+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_50" SheetName="[in_MasterSheetName]" Text="Yes" WorkbookPath="[in_MasterFile]" />
+                  <ui:WriteCell Cell="[&quot;P&quot;+(indexRow+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_52" SheetName="[in_MasterSheetName]" Text="[in_AttachmentName]" WorkbookPath="[in_MasterFile]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke MovePDF workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="MovePDF.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_PreviousPDFFilePath">[in_PreviousPDFFilePath]</InArgument>
