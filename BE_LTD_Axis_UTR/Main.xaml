@@ -91,7 +91,6 @@
       <AssemblyReference>Microsoft.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="Process Name :  BE_LTD_Axis_UTR&#xA;&#xA;ProcessDescription :  Bot Will Open Outlook And Read Unread Emails From Outlook and Bot Will Identify Bank Names In Email Body If Any Attachment Is Found Bot Will Save Attachments In Respective Bank Folder With CurrentDate Format, And Also Bot Will Extract Payment Reference Number And Amount For Validating With Master Payment File, The Data Will Matches PDF Will Save In Folder With Current Date&#xA;&#xA;Applications Involed :  Outlook, Excel, PDF&#xA;&#xA;Input : Extracting PaymentReferance number &amp; Amount from PDF file&#xA;&#xA;Output : Validating PaymentReferance number &amp; Amount with Master Payment File&#xA;&#xA;Bot Schedule: NA" DisplayName="BE_LTD_Axis_UTR" sap:VirtualizedContainerService.HintSize="687.2,981.6" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -190,48 +189,20 @@
                         <ui:LogMessage DisplayName="Log message  (Get transaction data error)" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_63" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;GetTransactionDataBody&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;GetTransactionDataSubject&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailCc&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailAdress&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Mail_Environment&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("GetTransactionDataBody").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("GetTransactionDataSubject").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Config("ToEmailCc").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[Config("ToEmailAdress").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[Config("Mail_Environment").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <Assign sap:VirtualizedContainerService.HintSize="378.4,60" sap2010:WorkflowViewState.IdRef="Assign_30">
@@ -506,7 +477,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="253.6,105.6" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="648,3756" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="603.2,3336" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -631,48 +602,20 @@
                                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Trace" Message="[&quot;Exception Caught: &quot; + exception.Message]" />
                                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_62" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                                      <Literal x:TypeArguments="x:String">&lt;p&gt;Hello Team,&lt;/p&gt;&lt;p&gt;This is to notify you that our BOT Axis UTR Process failed to load config file. Hence stopping the BOT.&lt;/p&gt;&lt;p&gt;Thanks &amp; Regards,&lt;/p&gt;&lt;p&gt;BE Ltd&lt;/p&gt;</Literal>
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                                      <Literal x:TypeArguments="x:String">Axis UTR Process Execution Stopped</Literal>
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                                      <Literal x:TypeArguments="x:String">sagarreddy.shyamala@bradsol.com</Literal>
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                                      <Literal x:TypeArguments="x:String">sagarreddy.shyamala@bradsol.com</Literal>
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                                      <Literal x:TypeArguments="x:String">OUTLOOK</Literal>
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                                      <Literal x:TypeArguments="x:Int32" Value="3" />
-                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">&lt;p&gt;Hello Team,&lt;/p&gt;&lt;p&gt;This is to notify you that our BOT Axis UTR Process failed to load config file. Hence stopping the BOT.&lt;/p&gt;&lt;p&gt;Thanks &amp; Regards,&lt;/p&gt;&lt;p&gt;BE Ltd&lt;/p&gt;</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">Axis UTR Process Execution Stopped</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">sagarreddy.shyamala@bradsol.com</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">sagarreddy.shyamala@bradsol.com</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">OUTLOOK</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">3</InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                 </ui:InvokeWorkflowFile>
                                                 <Throw Exception="[New System.Exception(&quot;Axis UTR Process failed to load config file. Hence stopping the BOT&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
@@ -717,50 +660,22 @@
                                     <Throw DisplayName="Throw Consecutive Exceptions exceeded" Exception="[new Exception(Config(&quot;ExceptionMessage_ConsecutiveErrors&quot;).ToString + &quot; Consecutive retry number: &quot; + (ConsecutiveSystemExceptions+1).ToString)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                                   </If.Then>
                                 </If>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\biologicale\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Send_StartEmailNotificationBody&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Send_StartEmailNotificationSubject&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailCc&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailAdress&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Mail_Environment&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("Send_StartEmailNotificationBody").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("Send_StartEmailNotificationSubject").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Config("ToEmailCc").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[Config("ToEmailAdress").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[Config("Mail_Environment").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Path_Validation workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="OutLook\Path_Validation.xaml">
@@ -829,75 +744,29 @@
                                 </ui:InvokeWorkflowFile>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke AppendingVendorData" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\AppendingVendorData\Main.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_MasterFilePath">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_SubjectFilter">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;VendorSubjectFilter&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_MailFolder">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;EmailFolder&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_VendorFileSavingPath">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentDateFolderPath" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_MasterSheetName">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;MasterSheetName&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_MasterFileFullPath">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;MasterFilePath&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_VendorFilePath">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentDateFolderPath" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FileName">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;VendorPaymentsFileName&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;VendorPaymentNotFoundinBody&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;VendorPaymentFileNotFoundinSubject&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailCc&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailAdress&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromName">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Mail_Environment&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Numberof_Retries">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_MasterFilePath">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SubjectFilter">[Config("VendorSubjectFilter").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_MailFolder">[Config("EmailFolder").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_VendorFileSavingPath">[CurrentDateFolderPath]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_MasterSheetName">[Config("MasterSheetName").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_MasterFileFullPath">[Config("MasterFilePath").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_VendorFilePath">[CurrentDateFolderPath]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[Config("VendorPaymentsFileName").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("VendorPaymentNotFoundinBody").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("VendorPaymentFileNotFoundinSubject").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Config("ToEmailCc").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[Config("ToEmailAdress").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromName">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[Config("Mail_Environment").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_Numberof_Retries">[CInt(Config("RetryCount"))]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExtractingPaymnetReferanceNumber workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="OutLook\ExtractingPaymnetReferanceNumber.xaml">
@@ -1081,7 +950,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="1549.6,1732" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,122.4" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
                                 <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="1504.8,1587.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -1109,48 +978,20 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_57" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;SystemExceptionBody&quot;).ToString+SystemException.Message+Config(&quot;SystemExceptionRegards&quot;).ToString" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;SystemExceptionSubject&quot;).ToString+SystemException.Message" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailCc&quot;).ToString" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailAdress&quot;).ToString" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Mail_Environment&quot;).ToString" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("SystemExceptionBody").ToString+SystemException.Message+Config("SystemExceptionRegards").ToString]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("SystemExceptionSubject").ToString+SystemException.Message]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Config("ToEmailCc").ToString]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[Config("ToEmailAdress").ToString]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[Config("Mail_Environment").ToString]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                 </ui:InvokeWorkflowFile>
                                               </Sequence>
@@ -1191,48 +1032,20 @@
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;No Data is Available&quot;]" />
                                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_59" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                                         <ui:InvokeWorkflowFile.Arguments>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Send_CompletedEmailNotificationBody&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Send_CompletedEmailNotificationSubject&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailCc&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailAdress&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Mail_Environment&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                                                          </InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("Send_CompletedEmailNotificationBody").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("Send_CompletedEmailNotificationSubject").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Config("ToEmailCc").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[Config("ToEmailAdress").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[Config("Mail_Environment").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
                                                         </ui:InvokeWorkflowFile.Arguments>
                                                       </ui:InvokeWorkflowFile>
                                                     </Sequence>
@@ -1247,48 +1060,20 @@
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Info" Message="[&quot;Data Is Available&quot;]" />
                                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail_ToUser workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_58" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\brad-uipath\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                                         <ui:InvokeWorkflowFile.Arguments>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strOutputFilePath" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Send_CompletedEmailNotificationBody&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Send_CompletedEmailNotificationSubject&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailCc&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;ToEmailAdress&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;Mail_Environment&quot;).ToString" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(Config(&quot;RetryCount&quot;))" />
-                                                          </InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[strOutputFilePath]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("Send_CompletedEmailNotificationBody").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("Send_CompletedEmailNotificationSubject").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Config("ToEmailCc").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[Config("ToEmailAdress").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[Config("Mail_Environment").ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
+                                                          <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
                                                         </ui:InvokeWorkflowFile.Arguments>
                                                       </ui:InvokeWorkflowFile>
                                                     </Sequence>

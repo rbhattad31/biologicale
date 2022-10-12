@@ -11766,9 +11766,9 @@
     "restore": {
       "projectUniqueName": "BE_LTD_Axis_UTR",
       "projectName": "BE_LTD_Axis_UTR",
-      "projectPath": "C:\\Users\\BRADSOL\\Documents\\UiPath\\BE_LTD_Axis_UTR\\.local",
+      "projectPath": "C:\\Users\\BRADSOL\\Documents\\GitHub\\biologicale\\BE_LTD_Axis_UTR\\.local",
       "packagesPath": "C:\\Users\\BRADSOL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BRADSOL\\Documents\\UiPath\\BE_LTD_Axis_UTR\\.local"
+      "outputPath": "C:\\Users\\BRADSOL\\Documents\\GitHub\\biologicale\\BE_LTD_Axis_UTR\\.local"
     },
     "frameworks": {
       "net461": {
