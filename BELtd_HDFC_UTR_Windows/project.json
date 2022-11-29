@@ -1,23 +1,19 @@
 {
   "name": "BELtd_HDFC_UTR_Windows",
-  "description": "BELtd_HDFC_UTR",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "Microsoft.AspNetCore.Connections.Abstractions": "[6.0.10]",
-    "Microsoft.AspNetCore.Http.Connections.Client": "[6.0.10]",
-    "UiPath.Excel.Activities": "[2.16.0]",
+    "UiPath.Excel.Activities": "[2.16.1]",
     "UiPath.Mail.Activities": "[1.18.1]",
-    "UiPath.PDF.Activities": "[3.10.1]",
-    "UiPath.Persistence.Activities": "[1.4.1]",
-    "UiPath.Presentations.Activities": "[1.7.0]",
-    "UiPath.System.Activities": "[22.4.5]",
+    "UiPath.PDF.Activities": "[3.11.0-preview]",
+    "UiPath.System.Activities": "[22.10.3]",
     "UiPath.Testing.Activities": "[22.10.0]",
-    "UiPath.UIAutomation.Activities": "[22.10.2]"
+    "UiPath.UIAutomation.Activities": "[22.10.3]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "22.4.3.0",
+  "studioVersion": "22.10.3.0",
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
@@ -46,58 +42,14 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "f2565336-31fb-4bba-ad82-6b731a36fd08",
-        "dataVariationFilePath": ".variations\\Tests_Tests.json",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\GeneralTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "278a1ea4-4dd7-498d-952a-10f21bc626b0",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "c2e7f24d-9ee9-48c8-b8f9-a30d9aaf6f6e",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\InitAllApplicationsTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "7647b28e-da60-4b5e-80ca-bae07d66509e",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\InitAllSettingsTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "6cceed8a-fb82-4464-9ead-a3bd73a3edc3",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\MainTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "885d5096-7cc1-421a-8c0e-10307e4cb1df",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\ProcessTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "48ca2f29-7fc5-40f4-9d8f-3113bc85c636",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "fcfeacfb-e5c4-4d51-9cac-ea6f76ad15c2",
+      "uniqueId": "7e99eeec-da41-486a-8d4d-d2ed2e9ed70c",
       "input": [],
       "output": []
     }
