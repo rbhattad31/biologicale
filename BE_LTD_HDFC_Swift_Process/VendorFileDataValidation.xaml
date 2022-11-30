@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1409.6,4672</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1448,4908</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VendorFileDataValidation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -101,7 +101,7 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VendorFileDataValidation" sap:VirtualizedContainerService.HintSize="1420,4607.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VendorFileDataValidation" sap:VirtualizedContainerService.HintSize="1458.4,4843.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtVendorFileDate" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtVendorFile" />
@@ -118,27 +118,27 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1376.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;VendorFileDataValidation Xaml Execution Started&quot;]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1376.8,968.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Data\Attachments\08-04-2022\Vendor_Payments_11.07.2022.xlsb">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1396,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;VendorFileDataValidation Xaml Execution Started&quot;]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1396,1000.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Data\Attachments\08-04-2022\Vendor_Payments_11.07.2022.xlsb">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,849.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,881.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtVendorFile]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="356.8,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[in_SheetName]">
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtVendorFile]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[in_SheetName]">
               <ui:ExcelReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
                 </InArgument>
               </ui:ExcelReadRange.Range>
             </ui:ExcelReadRange>
-            <Assign sap:VirtualizedContainerService.HintSize="356.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">[dtVendorFileDate]</OutArgument>
               </Assign.To>
@@ -169,7 +169,7 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:FilterDataTable DataTable="[dtVendorFile]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1376.8,172" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtVendorFile]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[dtVendorFile]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1396,172" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtVendorFile]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
@@ -194,13 +194,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1376.8,3020" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[in_MasterFilePath]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1396,3192" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[in_MasterFilePath]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1343.2,2900.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1362.4,3072.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strDateFormat" />
             </Sequence.Variables>
@@ -237,7 +237,7 @@ Select d1).ToList]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1300,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[strMasterFileCount.Count]" />
-            <If Condition="[list_SheetNames.Contains(in_MasterSheetName)]" DisplayName="If 'Checking Sheet Name Contains Or Not'" sap:VirtualizedContainerService.HintSize="1300,2018.4" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[list_SheetNames.Contains(in_MasterSheetName)]" DisplayName="If 'Checking Sheet Name Contains Or Not'" sap:VirtualizedContainerService.HintSize="1300,2158.4" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,13 +245,13 @@ Select d1).ToList]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="CheckingDate" sap:VirtualizedContainerService.HintSize="546.4,1539.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="CheckingDate" sap:VirtualizedContainerService.HintSize="584.8,1679.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[strMasterFileCount.Count&gt;=1]" DisplayName="If 'Checking Date Exist Or Not'" sap:VirtualizedContainerService.HintSize="503.2,1448" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[strMasterFileCount.Count&gt;=1]" DisplayName="If 'Checking Date Exist Or Not'" sap:VirtualizedContainerService.HintSize="522.4,1556" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -259,7 +259,7 @@ Select d1).ToList]</InArgument>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="421.6,554.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="440.8,662.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -267,51 +267,25 @@ Select d1).ToList]</InArgument>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="378.4,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;not append&quot;]" />
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Vendor File Date Already Exist&quot;]" />
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Mail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="378.4,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="C:\Users\BRADSOL\Documents\GitHub\biologicale\BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Mail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="378.4,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_Config("").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_Config("").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_Config("").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Config("").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_username">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Password">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[Nothing]</InArgument>
                             <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries" />
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <Throw Exception="[New BusinessRuleException(&quot;Vendor File Date Already Exist In Master File&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <Throw Exception="[New BusinessRuleException(&quot;Vendor File Date Already Exist In Master File&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,98.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </Sequence>
                     </If.Then>
                     <If.Else>

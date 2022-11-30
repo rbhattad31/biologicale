@@ -33,7 +33,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1525.6,15308</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1607.2,18588.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
@@ -144,7 +144,7 @@
       <AssemblyReference>System.Net.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1536,15243.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1617.6,18524" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="list_MessageVendor" />
       <Variable x:TypeArguments="x:String" Name="strVendorFileFullPath" />
@@ -173,8 +173,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1473.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Trace" Message="[&quot;AppendingVendorData Xaml Execution Started&quot;]" />
-    <Sequence DisplayName="Kill Excel process" sap:VirtualizedContainerService.HintSize="1473.6,92.8" sap2010:WorkflowViewState.IdRef="Sequence_124">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1555.2,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Trace" Message="[&quot;AppendingVendorData Xaml Execution Started&quot;]" />
+    <Sequence DisplayName="Kill Excel process" sap:VirtualizedContainerService.HintSize="1555.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_124">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -184,7 +184,7 @@
       <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Excel" />
       <ui:LogMessage DisplayName="Log Excel kill message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_127" Level="Info" Message="[&quot;Killed Excel process before appending Vendor data to Master File&quot;]" />
     </Sequence>
-    <Sequence DisplayName="Get Today's Date in dd-MMM-yyyy Formats" sap:VirtualizedContainerService.HintSize="1473.6,92.8" sap2010:WorkflowViewState.IdRef="Sequence_102">
+    <Sequence DisplayName="Get Today's Date in dd-MMM-yyyy Formats" sap:VirtualizedContainerService.HintSize="1555.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_102">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -201,42 +201,42 @@
       </Assign>
       <ui:LogMessage DisplayName="Log 'Current Date' in dd-MMM-yyyy" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_118" Level="Info" Message="[&quot;Today's date in dd-MMM-yyyy is: &quot;+strCurrentDateTimeInMMMFormat]" />
     </Sequence>
-    <Sequence DisplayName="AppendingVendorData" sap:VirtualizedContainerService.HintSize="1473.6,13228" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <Sequence DisplayName="AppendingVendorData" sap:VirtualizedContainerService.HintSize="1555.2,16508.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope - Payment Master File" sap:VirtualizedContainerService.HintSize="1411.2,3383.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_MasterFileFullPath]">
+      <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope - Payment Master File" sap:VirtualizedContainerService.HintSize="1492.8,3922.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_MasterFileFullPath]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="709.6,3264" sap2010:WorkflowViewState.IdRef="Sequence_73">
+            <Sequence sap:VirtualizedContainerService.HintSize="723.2,3803.2" sap2010:WorkflowViewState.IdRef="Sequence_73">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="647.2,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_93" Level="Info" Message="[&quot;Master File Path is : &quot;+in_MasterFileFullPath + Environment.NewLine + &quot;Master file sheet Name is: &quot;+ in_MasterSheetName]" />
-              <Sequence DisplayName="Read Master File, Get Date Column Name &amp; Today's entries" sap:VirtualizedContainerService.HintSize="647.2,2998.4" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="660.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_93" Level="Info" Message="[&quot;Master File Path is : &quot;+in_MasterFileFullPath + Environment.NewLine + &quot;Master file sheet Name is: &quot;+ in_MasterSheetName]" />
+              <Sequence DisplayName="Read Master File, Get Date Column Name &amp; Today's entries" sap:VirtualizedContainerService.HintSize="660.8,3537.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMasterFileData]" DisplayName="Reading MasterFile" sap:VirtualizedContainerService.HintSize="584.8,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" SheetName="[in_MasterSheetName]">
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMasterFileData]" DisplayName="Reading MasterFile" sap:VirtualizedContainerService.HintSize="598.4,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" SheetName="[in_MasterSheetName]">
                   <ui:ExcelReadRange.Range>
                     <InArgument x:TypeArguments="x:String">
                       <Literal x:TypeArguments="x:String" Value="" />
                     </InArgument>
                   </ui:ExcelReadRange.Range>
                 </ui:ExcelReadRange>
-                <Sequence DisplayName="Check Date Column Name is same as in Config " sap:VirtualizedContainerService.HintSize="584.8,1545.6" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                <Sequence DisplayName="Check Date Column Name is same as in Config " sap:VirtualizedContainerService.HintSize="598.4,1545.6" sap2010:WorkflowViewState.IdRef="Sequence_120">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,48 +282,20 @@
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_132" Level="Error" Message="[&quot;Date column name provided in config file for Payment Master file is not exist in Payment Master file&quot;]" />
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Mail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="378.4,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Attachment" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_body_PaymentMasterFileDateColumnNotFound" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_subject_PaymentMasterFileDateColumnNotFound" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailCc" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailTo" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FromName" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FromEmail" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Exchange_Domain" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SMTP_Port" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Mail_Environment" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_username" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Password" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SMTP_Server" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_Numberof_Retries" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[in_Attachment]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_body_PaymentMasterFileDateColumnNotFound]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_subject_PaymentMasterFileDateColumnNotFound]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[in_EmailCc]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_EmailTo]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[in_FromName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[in_FromEmail]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[in_Exchange_Domain]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[in_SMTP_Port]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Mail_Environment]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Password">[in_Password]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[in_SMTP_Server]</InArgument>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[in_Numberof_Retries]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <Throw Exception="[new BusinessRuleException(&quot;Master File Date Column specified in Config file is not exist in Master Payment File&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,98.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
@@ -331,20 +303,20 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Convert DateFormat of the file" sap:VirtualizedContainerService.HintSize="584.8,781.6" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                <Sequence DisplayName="Convert DateFormat of the file" sap:VirtualizedContainerService.HintSize="598.4,1320.8" sap2010:WorkflowViewState.IdRef="Sequence_119">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtMasterFileData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,658.4" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtMasterFileData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="536,1197.6" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,532.8" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,1072" sap2010:WorkflowViewState.IdRef="Sequence_118">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="ui:GenericValue" Name="gvDate" />
                           </Sequence.Variables>
@@ -353,20 +325,48 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="[strMasterFileDateColumnName]" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="337.6,197.6" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[CurrentRow]">
+                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="[strMasterFileDateColumnName]" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="440,197.6" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[CurrentRow]">
                             <ui:GetRowItem.Value>
                               <OutArgument x:TypeArguments="ui:GenericValue">[gvDate]</OutArgument>
                             </ui:GetRowItem.Value>
                           </ui:GetRowItem>
-                          <Assign DisplayName="Format date to dd-MMM-yyyy" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_63">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:Object">[CurrentRow(2)]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:Object">[(DateTime.ParseExact(gvDate, "MM/dd/yyyy hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).tostring("dd-MMM-yyyy")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,608.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                            <TryCatch.Try>
+                              <Assign DisplayName="Format date to dd-MMM-yyyy" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_63">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[CurrentRow(2)]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">[(DateTime.ParseExact(gvDate, "MM/dd/yyyy hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).tostring("dd-MMM-yyyy")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406.4,434.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_142">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_134" Level="Fatal" Message="[&quot;Date Format in Master file is changed or error occurred&quot;]" />
+                                    <Throw Exception="[new BusinessRuleException(&quot;Date Format in Master file is changed or error occurred&quot;)]" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                          </TryCatch>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="440,62.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                             <ui:CommentOut.Body>
                               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,477.6" sap2010:WorkflowViewState.IdRef="Sequence_125">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -398,8 +398,8 @@
                     </ui:ForEachRow.Body>
                   </ui:ForEachRow>
                 </Sequence>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_80" Level="Info" Message="[&quot;Master Payment file is read&quot;]" />
-                <Assign DisplayName="Get today's entries in dd-MMM-yyyy format" sap:VirtualizedContainerService.HintSize="584.8,73.6" sap2010:WorkflowViewState.IdRef="Assign_59">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="598.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_80" Level="Info" Message="[&quot;Master Payment file is read&quot;]" />
+                <Assign DisplayName="Get today's entries in dd-MMM-yyyy format" sap:VirtualizedContainerService.HintSize="598.4,73.6" sap2010:WorkflowViewState.IdRef="Assign_59">
                   <Assign.To>
                     <OutArgument x:TypeArguments="scg:List(sd:DataRow)">[listdtMasterFileDateinddMMMyyyyFormat]</OutArgument>
                   </Assign.To>
@@ -410,7 +410,7 @@
 									Select r ).Tolist]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_122" Level="Info" Message="[&quot;Number of entries with today's date in 'dd-MMM-yyyy' format are: &quot; + listdtMasterFileDateinddMMMyyyyFormat.Count.ToString]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="598.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_122" Level="Info" Message="[&quot;Number of entries with today's date in 'dd-MMM-yyyy' format are: &quot; + listdtMasterFileDateinddMMMyyyyFormat.Count.ToString]" />
               </Sequence>
             </Sequence>
           </ActivityAction>
@@ -422,7 +422,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <If Condition="[listdtMasterFileDateinddMMMyyyyFormat.Count&gt;0]" DisplayName="If MasterFile is having today's date entries or not'" sap:VirtualizedContainerService.HintSize="1411.2,9681.6" sap2010:WorkflowViewState.IdRef="If_6">
+      <If Condition="[listdtMasterFileDateinddMMMyyyyFormat.Count&gt;0]" DisplayName="If MasterFile is having today's date entries or not'" sap:VirtualizedContainerService.HintSize="1492.8,12423.2" sap2010:WorkflowViewState.IdRef="If_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -440,25 +440,24 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="No CurrentDate exist in Master File" sap:VirtualizedContainerService.HintSize="1329.6,9290.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="No CurrentDate exist in Master File" sap:VirtualizedContainerService.HintSize="1411.2,12032" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1267.2,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;CurrentDate entries do not exist in MasterPaymentFile, so downloading Vendor payment file from Outlook&quot;]" />
-            <ui:RetryScope DisplayName="Retry Scope for GetOutlook" sap:VirtualizedContainerService.HintSize="1267.2,707.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_NumberOfRetries]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1348.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;CurrentDate entries do not exist in MasterPaymentFile, so downloading Vendor payment file from Outlook&quot;]" />
+            <ui:RetryScope DisplayName="Retry Scope for GetOutlook" sap:VirtualizedContainerService.HintSize="1348.8,564.8" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_NumberOfRetries]">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,440" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,297.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_97" Level="Info" Message="[&quot;Change mark as read property to yes after development&quot;]" />
-                    <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" Filter="[in_SubjectFilter]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[in_MailFolder]" MarkAsRead="False" Messages="[list_MessageVendor]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1000" />
+                    <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" Filter="[in_SubjectFilter]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[in_MailFolder]" MarkAsRead="True" Messages="[list_MessageVendor]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1000" />
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Info" Message="[&quot;Get outlook mail messages action is complete and read vendor payment emails if any&quot;]" />
                   </Sequence>
                 </ActivityAction>
@@ -475,7 +474,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <If Condition="[list_MessageVendor.Count&gt;0]" sap:VirtualizedContainerService.HintSize="1267.2,8277.6" sap2010:WorkflowViewState.IdRef="If_8">
+            <If Condition="[list_MessageVendor.Count&gt;0]" sap:VirtualizedContainerService.HintSize="1348.8,11161.6" sap2010:WorkflowViewState.IdRef="If_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -483,16 +482,16 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="1185.6,7584.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                <Sequence sap:VirtualizedContainerService.HintSize="1267.2,10468.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log &quot;Unread Vendor Payment Email found&quot;" sap:VirtualizedContainerService.HintSize="1123.2,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Unread Vendor Payment Emails are found&quot;]" />
-                  <ui:LogMessage DisplayName="Log &quot;No of unread Vendor payment emails found&quot;" sap:VirtualizedContainerService.HintSize="1123.2,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Number of unread mails related to Vendor payment files are: &quot;+list_MessageVendor.Count.ToString]" />
-                  <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each mail download attachment" sap:VirtualizedContainerService.HintSize="1123.2,62.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[list_MessageVendor]">
+                  <ui:LogMessage DisplayName="Log &quot;Unread Vendor Payment Email found&quot;" sap:VirtualizedContainerService.HintSize="1204.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Unread Vendor Payment Emails are found&quot;]" />
+                  <ui:LogMessage DisplayName="Log &quot;No of unread Vendor payment emails found&quot;" sap:VirtualizedContainerService.HintSize="1204.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Number of unread mails related to Vendor payment files are: &quot;+list_MessageVendor.Count.ToString]" />
+                  <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each mail download attachment" sap:VirtualizedContainerService.HintSize="1204.8,62.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[list_MessageVendor]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="snm:MailMessage">
                         <ActivityAction.Argument>
@@ -554,20 +553,20 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEach>
-                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each downloaded Vendor Payment Files" sap:VirtualizedContainerService.HintSize="1123.2,7074.4" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[Directory.GetFiles(in_VendorFilePath)]">
+                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each downloaded Vendor Payment Files" sap:VirtualizedContainerService.HintSize="1204.8,9958.4" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[Directory.GetFiles(in_VendorFilePath)]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1088,6940" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1169.6,9824" sap2010:WorkflowViewState.IdRef="Sequence_96">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[item.ToString.Contains(in_FileName)]" DisplayName="If 'Checking item Contains File Name Or Not'" sap:VirtualizedContainerService.HintSize="1025.6,6816.8" sap2010:WorkflowViewState.IdRef="If_29">
+                          <If Condition="[item.ToString.Contains(in_FileName)]" DisplayName="If 'Checking item Contains File Name Or Not'" sap:VirtualizedContainerService.HintSize="1107.2,9700.8" sap2010:WorkflowViewState.IdRef="If_29">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -575,14 +574,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="944,6536" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                              <Sequence sap:VirtualizedContainerService.HintSize="1025.6,9420" sap2010:WorkflowViewState.IdRef="Sequence_94">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Get File name of the attachment" sap:VirtualizedContainerService.HintSize="881.6,302.4" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                <Sequence DisplayName="Get File name of the attachment" sap:VirtualizedContainerService.HintSize="963.2,302.4" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -606,7 +605,7 @@
                                     </Assign.Value>
                                   </Assign>
                                 </Sequence>
-                                <Sequence DisplayName="Kill excel process" sap:VirtualizedContainerService.HintSize="881.6,92.8" sap2010:WorkflowViewState.IdRef="Sequence_135">
+                                <Sequence DisplayName="Kill excel process" sap:VirtualizedContainerService.HintSize="963.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_135">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -616,7 +615,7 @@
                                   <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - Excel" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="KillProcess_4" ProcessName="Excel" />
                                   <ui:LogMessage DisplayName="Log Excel Kill status" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_130" Level="Info" Message="[&quot;Killed Excel application before processing vendor file: &quot;+ strVendorFileName]" />
                                 </Sequence>
-                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Get Vendor file sheet Names " sap:VirtualizedContainerService.HintSize="881.6,435.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" Visible="False" Workbook="[Workbook]" WorkbookPath="[strVendorFileFullPath]">
+                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Get Vendor file sheet Names " sap:VirtualizedContainerService.HintSize="963.2,435.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" Visible="False" Workbook="[Workbook]" WorkbookPath="[strVendorFileFullPath]">
                                   <ui:ExcelApplicationScope.Body>
                                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                       <ActivityAction.Argument>
@@ -654,19 +653,19 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ExcelApplicationScope>
-                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Sheet in Vendor File" sap:VirtualizedContainerService.HintSize="881.6,5462.4" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[strSheetNames]">
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Sheet in Vendor File" sap:VirtualizedContainerService.HintSize="963.2,8346.4" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[strSheetNames]">
                                   <ui:ForEach.Body>
                                     <ActivityAction x:TypeArguments="x:String">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:String" Name="SheetName" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="846.4,5328" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="928,8212" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence sap2010:Annotation.AnnotationText="Read Vendor payment file sheet wise, Get Date Column Name, Change date format for the column, filter empty rows if any." DisplayName="Read VendorFile in the sheet of Payment File" sap:VirtualizedContainerService.HintSize="784,2708" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                        <Sequence sap2010:Annotation.AnnotationText="Read Vendor payment file sheet wise, Get Date Column Name, Change date format for the column, filter empty rows if any." DisplayName="Read VendorFile in the sheet of Payment File" sap:VirtualizedContainerService.HintSize="865.6,3945.6" sap2010:WorkflowViewState.IdRef="Sequence_101">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -674,9 +673,9 @@
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Reading Vendor File" sap:VirtualizedContainerService.HintSize="584.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Info" Message="[&quot;Reading Vendor Payment File: &quot; + strVendorFileName]" />
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;Sheet Name :: &quot;+SheetName]" />
-                                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - read Vendor File" sap:VirtualizedContainerService.HintSize="584.8,312" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="[strVendorFileFullPath]">
+                                          <ui:LogMessage DisplayName="Log Reading Vendor File" sap:VirtualizedContainerService.HintSize="598.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Info" Message="[&quot;Reading Vendor Payment File: &quot; + strVendorFileName]" />
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="598.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;Sheet Name :: &quot;+SheetName]" />
+                                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - read Vendor File" sap:VirtualizedContainerService.HintSize="598.4,312" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="[strVendorFileFullPath]">
                                             <ui:ExcelApplicationScope.Body>
                                               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                 <ActivityAction.Argument>
@@ -699,7 +698,7 @@
                                               </ActivityAction>
                                             </ui:ExcelApplicationScope.Body>
                                           </ui:ExcelApplicationScope>
-                                          <Sequence DisplayName="Get Column Name in Vendor Payment File" sap:VirtualizedContainerService.HintSize="584.8,1403.2" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                          <Sequence DisplayName="Get Column Name in Vendor Payment File" sap:VirtualizedContainerService.HintSize="598.4,1403.2" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -744,48 +743,20 @@
                                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_133" Level="Error" Message="[&quot;Date column name provided in config file for Vendor file is not exist in Vendor Payment file&quot;]" />
                                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Mail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="378.4,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Attachment" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_body_VendorPaymentFileDateColumnNotFound" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Subject">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_subject_VendorPaymentFileDateColumnNotFound" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailCc" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailTo" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_FronName">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FromName" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FromEmail" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Exchange_Domain" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SMTP_Port" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Mail_Environment" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_username">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_username" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Password">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Password" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">
-                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SMTP_Server" />
-                                                      </InArgument>
-                                                      <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">
-                                                        <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_Numberof_Retries" />
-                                                      </InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[in_Attachment]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[in_body_VendorPaymentFileDateColumnNotFound]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[in_subject_VendorPaymentFileDateColumnNotFound]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailCc">[in_EmailCc]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">[in_EmailTo]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_FronName">[in_FromName]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_FromEmail">[in_FromEmail]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Exchange_Domain">[in_Exchange_Domain]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Port">[in_SMTP_Port]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Mail_Environment">[in_Mail_Environment]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Password">[in_Password]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_SMTP_Server">[in_SMTP_Server]</InArgument>
+                                                      <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[in_Numberof_Retries]</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                   </ui:InvokeWorkflowFile>
                                                   <Throw Exception="[new BusinessRuleException(&quot;Vendor File Date Column specified in Config file is not exist in Vendor Payment File&quot;)]" sap:VirtualizedContainerService.HintSize="378.4,98.4" sap2010:WorkflowViewState.IdRef="Throw_3" />
@@ -793,20 +764,20 @@
                                               </If.Else>
                                             </If>
                                           </Sequence>
-                                          <Sequence DisplayName="Convert DateFormat of the file" sap:VirtualizedContainerService.HintSize="584.8,328" sap2010:WorkflowViewState.IdRef="Sequence_117">
+                                          <Sequence DisplayName="Convert DateFormat of the file" sap:VirtualizedContainerService.HintSize="598.4,1565.6" sap2010:WorkflowViewState.IdRef="Sequence_117">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtVendorFile]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtVendorFile]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="536,1300" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                               <ui:ForEachRow.Body>
                                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="499.2,876" sap2010:WorkflowViewState.IdRef="Sequence_116">
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,1174.4" sap2010:WorkflowViewState.IdRef="Sequence_116">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="ui:GenericValue" Name="gvDate" />
                                                     </Sequence.Variables>
@@ -815,12 +786,12 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="[strVendorFileDateColumnName]" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="436.8,197.6" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[CurrentRow]">
+                                                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="[strVendorFileDateColumnName]" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="440,197.6" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[CurrentRow]">
                                                       <ui:GetRowItem.Value>
                                                         <OutArgument x:TypeArguments="ui:GenericValue">[gvDate]</OutArgument>
                                                       </ui:GetRowItem.Value>
                                                     </ui:GetRowItem>
-                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.8,62.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="440,62.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                                       <ui:CommentOut.Body>
                                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,225.6" sap2010:WorkflowViewState.IdRef="Sequence_126">
                                                           <sap:WorkflowViewStateService.ViewState>
@@ -838,7 +809,7 @@
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                     </ui:CommentOut>
-                                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,310.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,608.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                                       <TryCatch.Try>
                                                         <Assign DisplayName="Format date " sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_54">
                                                           <Assign.To>
@@ -850,10 +821,10 @@
                                                         </Assign>
                                                       </TryCatch.Try>
                                                       <TryCatch.Catches>
-                                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406.4,434.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
@@ -861,19 +832,20 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                             </ActivityAction.Argument>
-                                                            <Assign DisplayName="Format Date" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_62">
-                                                              <Assign.To>
-                                                                <OutArgument x:TypeArguments="x:Object">[CurrentRow(2)]</OutArgument>
-                                                              </Assign.To>
-                                                              <Assign.Value>
-                                                                <InArgument x:TypeArguments="x:Object">[(DateTime.ParseExact(gvDate, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture)).tostring("dd-MMM-yyyy")]</InArgument>
-                                                              </Assign.Value>
-                                                            </Assign>
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_143">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_135" Level="Fatal" Message="[&quot;Date Format in Vendor payment file: &quot;+ strVendorFileName +&quot; is changed or error occurred&quot;]" />
+                                                              <Throw Exception="[new BusinessRuleException(&quot;Date Format in Vendor payment file: &quot;+ strVendorFileName +&quot; is changed or error occurred&quot;)]" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                                                            </Sequence>
                                                           </ActivityAction>
                                                         </Catch>
                                                       </TryCatch.Catches>
                                                     </TryCatch>
-                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.8,62.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="440,62.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                                                       <ui:CommentOut.Body>
                                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,225.6" sap2010:WorkflowViewState.IdRef="Sequence_127">
                                                           <sap:WorkflowViewStateService.ViewState>
@@ -896,14 +868,14 @@
                                               </ui:ForEachRow.Body>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:ForEachRow>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_99" Level="Info" Message="[&quot;Reading Vendor File: &quot; + strVendorFileName + &quot; Sheet name: &quot;+ SheetName+ &quot; has been complete&quot;]" />
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="536,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_99" Level="Info" Message="[&quot;Reading Vendor File: &quot; + strVendorFileName + &quot; Sheet name: &quot;+ SheetName+ &quot; has been complete&quot;]" />
                                           </Sequence>
-                                          <Sequence DisplayName="Filter empty rows from Vendor Datatable" sap:VirtualizedContainerService.HintSize="584.8,92.8" sap2010:WorkflowViewState.IdRef="Sequence_132">
+                                          <Sequence DisplayName="Filter empty rows from Vendor Datatable" sap:VirtualizedContainerService.HintSize="598.4,92.8" sap2010:WorkflowViewState.IdRef="Sequence_132">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -932,17 +904,17 @@
                                             <ui:LogMessage DisplayName="Log Filter DT message" sap:VirtualizedContainerService.HintSize="433.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_102" Level="Info" Message="[&quot;Removed empty rows from vendor payment file if any&quot;]" />
                                           </Sequence>
                                         </Sequence>
-                                        <Sequence DisplayName="Get Vendor payment file date " sap:VirtualizedContainerService.HintSize="784,92.8" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                        <Sequence DisplayName="Get Vendor payment file date " sap:VirtualizedContainerService.HintSize="865.6,1047.2" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="s:DateTime" Name="dateVendorFileDate" />
                                           </Sequence.Variables>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign DisplayName="Create a datatable with only unique date values in date column" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_41">
+                                          <Assign DisplayName="Create a datatable with only unique date values in date column" sap:VirtualizedContainerService.HintSize="436.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_41">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="sd:DataTable">[dtVendorFileDate]</OutArgument>
                                             </Assign.To>
@@ -950,7 +922,7 @@
                                               <InArgument x:TypeArguments="sd:DataTable">[dtVendorFile.DefaultView.ToTable(True, strVendorFileDateColumnName)]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <Assign DisplayName="Get Last row value that contains the file date" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                          <Assign DisplayName="Get Last row value that contains the file date" sap:VirtualizedContainerService.HintSize="436.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_32">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="sd:DataRow">[datarowVendorFileLastRow]</OutArgument>
                                             </Assign.To>
@@ -958,7 +930,7 @@
                                               <InArgument x:TypeArguments="sd:DataRow">[dtVendorFileDate.AsEnumerable.Last()]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <Assign DisplayName="Get Date from last row of the datatable" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                          <Assign DisplayName="Get Date from last row of the datatable" sap:VirtualizedContainerService.HintSize="436.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_42">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:String">[strVendorFileDate]</OutArgument>
                                             </Assign.To>
@@ -966,18 +938,46 @@
                                               <InArgument x:TypeArguments="x:String">[datarowVendorFileLastRow(0).ToString]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_103" Level="Info" Message="[&quot;Date read from Vendor file: &quot; + strVendorFileDate]" />
-                                          <Assign DisplayName="Get Date from string" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_48">
-                                            <Assign.To>
-                                              <OutArgument x:TypeArguments="s:DateTime">[dateVendorFileDate]</OutArgument>
-                                            </Assign.To>
-                                            <Assign.Value>
-                                              <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(strVendorFileDate, "dd-MMM-yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
-                                            </Assign.Value>
-                                          </Assign>
-                                          <ui:LogMessage DisplayName="Log Vendor payemnt File date" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Date in Vendor Payment file: &quot; + Environment.NewLine +&quot;In dd-MM-yyyy format: &quot;+ dateVendorFileDate.ToString(&quot;dd-MM-yyyy&quot;) + Environment.NewLine +&quot;In dd-MMM-yyyy fromat: &quot;+dateVendorFileDate.ToString(&quot;dd-MMM-yyyy&quot;)]" />
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_103" Level="Info" Message="[&quot;Date read from Vendor file: &quot; + strVendorFileDate]" />
+                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,310.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                            <TryCatch.Try>
+                                              <Assign DisplayName="Get Date from string" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_48">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="s:DateTime">[dateVendorFileDate]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(strVendorFileDate, "dd-MMM-yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </TryCatch.Try>
+                                            <TryCatch.Catches>
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ActivityAction x:TypeArguments="s:Exception">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_144">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_136" Level="Fatal" Message="[&quot;Date Format in Vendor payment file: &quot;+ strVendorFileName +&quot; is changed or error occurred&quot;]" />
+                                                    <Throw Exception="[new BusinessRuleException(&quot;Date Format in Vendor payment file: &quot;+ strVendorFileName +&quot; is changed or error occurred&quot;)]" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </Catch>
+                                            </TryCatch.Catches>
+                                          </TryCatch>
+                                          <ui:LogMessage DisplayName="Log Vendor payemnt File date" sap:VirtualizedContainerService.HintSize="436.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Date in Vendor Payment file: &quot; + Environment.NewLine +&quot;In dd-MM-yyyy format: &quot;+ dateVendorFileDate.ToString(&quot;dd-MM-yyyy&quot;) + Environment.NewLine +&quot;In dd-MMM-yyyy fromat: &quot;+dateVendorFileDate.ToString(&quot;dd-MMM-yyyy&quot;)]" />
                                         </Sequence>
-                                        <If Condition="[date.TryParseExact(strVendorFileDate,&quot;dd-MMM-yyyy&quot;,Nothing, Globalization.DateTimeStyles.None, Nothing)]" DisplayName="Append data to Master if only date column contains date values" sap:VirtualizedContainerService.HintSize="784,2324" sap2010:WorkflowViewState.IdRef="If_30">
+                                        <If Condition="[date.TryParseExact(strVendorFileDate,&quot;dd-MMM-yyyy&quot;,Nothing, Globalization.DateTimeStyles.None, Nothing)]" DisplayName="Append data to Master if only date column contains date values" sap:VirtualizedContainerService.HintSize="865.6,3016" sap2010:WorkflowViewState.IdRef="If_30">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -985,44 +985,44 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="702.4,1932.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="784,2624.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:LogMessage DisplayName="Log - Vendor payment Date Column format status" sap:VirtualizedContainerService.HintSize="640,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_100" Level="Info" Message="[&quot;Vendor payment file date column format is correct&quot; + Environment.NewLine + &quot;Vendor payment file: &quot; + strVendorFileName +  Environment.NewLine + &quot; Sheet Name: &quot;+ SheetName + Environment.NewLine + &quot;Appending Vendor payment file data to Payment Master file&quot;]" />
-                                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Append Vendor data to Master File" sap:VirtualizedContainerService.HintSize="640,1667.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_MasterFileFullPath]">
+                                              <ui:LogMessage DisplayName="Log - Vendor payment Date Column format status" sap:VirtualizedContainerService.HintSize="721.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_100" Level="Info" Message="[&quot;Vendor payment file date column format is correct&quot; + Environment.NewLine + &quot;Vendor payment file: &quot; + strVendorFileName +  Environment.NewLine + &quot; Sheet Name: &quot;+ SheetName + Environment.NewLine + &quot;Appending Vendor payment file data to Payment Master file&quot;]" />
+                                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Append Vendor data to Master File" sap:VirtualizedContainerService.HintSize="721.6,2359.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_MasterFileFullPath]">
                                                 <ui:ExcelApplicationScope.Body>
                                                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                     <ActivityAction.Argument>
                                                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                                     </ActivityAction.Argument>
-                                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606.4,1548" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,2240" sap2010:WorkflowViewState.IdRef="Sequence_93">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:ExcelGetWorkbookSheets DisplayName="Get Workbook Sheets" sap:VirtualizedContainerService.HintSize="544,32" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheets_3" Sheets="[list_Sheets]" />
-                                                      <If Condition="[list_Sheets.Contains(in_MasterSheetName)]" DisplayName="If Master Sheet exist in the Master File" sap:VirtualizedContainerService.HintSize="544,1352.8" sap2010:WorkflowViewState.IdRef="If_28">
+                                                      <ui:ExcelGetWorkbookSheets DisplayName="Get Workbook Sheets" sap:VirtualizedContainerService.HintSize="625.6,32" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheets_3" Sheets="[list_Sheets]" />
+                                                      <If Condition="[list_Sheets.Contains(in_MasterSheetName)]" DisplayName="If Master Sheet exist in the Master File" sap:VirtualizedContainerService.HintSize="625.6,2044.8" sap2010:WorkflowViewState.IdRef="If_28">
                                                         <If.Then>
-                                                          <Sequence DisplayName="Append vendor data to Master sheet if date is not exist" sap:VirtualizedContainerService.HintSize="462.4,653.6" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                                          <Sequence DisplayName="Append vendor data to Master sheet if date is not exist" sap:VirtualizedContainerService.HintSize="544,1345.6" sap2010:WorkflowViewState.IdRef="Sequence_90">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMasterPaymentFileData]" DisplayName="Reading Master File" sap:VirtualizedContainerService.HintSize="400,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" SheetName="[in_MasterSheetName]">
+                                                            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMasterPaymentFileData]" DisplayName="Reading Master File" sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" SheetName="[in_MasterSheetName]">
                                                               <ui:ExcelReadRange.Range>
                                                                 <InArgument x:TypeArguments="x:String">
                                                                   <Literal x:TypeArguments="x:String" Value="" />
                                                                 </InArgument>
                                                               </ui:ExcelReadRange.Range>
                                                             </ui:ExcelReadRange>
-                                                            <Sequence DisplayName="Convert DateFormat of the file" sap:VirtualizedContainerService.HintSize="400,185.6" sap2010:WorkflowViewState.IdRef="Sequence_123">
+                                                            <Sequence DisplayName="Convert DateFormat of the file" sap:VirtualizedContainerService.HintSize="481.6,185.6" sap2010:WorkflowViewState.IdRef="Sequence_123">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1104,7 +1104,7 @@
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </ui:ForEachRow>
                                                             </Sequence>
-                                                            <Sequence DisplayName="Print Master File date Column values" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_130">
+                                                            <Sequence DisplayName="Print Master File date Column values" sap:VirtualizedContainerService.HintSize="481.6,92.8" sap2010:WorkflowViewState.IdRef="Sequence_130">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1130,10 +1130,10 @@
                                                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="Info" Message="[&quot;Master File Date Column Uniue Values before appending: &quot; + Environment.NewLine +strOutputMasterDates]" />
                                                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="Info" Message="[&quot;Date in vendor payment file : &quot; + strVendorFileDate]" />
                                                             </Sequence>
-                                                            <If Condition="[strOutputMasterDates.contains(strVendorFileDate)]" DisplayName="If Vendor data already exists in Master File" sap:VirtualizedContainerService.HintSize="400,62.4" sap2010:WorkflowViewState.IdRef="If_31">
+                                                            <If Condition="[strOutputMasterDates.contains(strVendorFileDate)]" DisplayName="If Vendor data already exists in Master File" sap:VirtualizedContainerService.HintSize="481.6,754.4" sap2010:WorkflowViewState.IdRef="If_31">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
@@ -1247,7 +1247,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="440.8,527.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                <Sequence DisplayName="If no Vendor payment emails found" sap:VirtualizedContainerService.HintSize="440.8,527.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

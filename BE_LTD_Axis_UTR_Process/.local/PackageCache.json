@@ -83,8 +83,8 @@
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.form.activities\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.Activities.Design.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.form.activities\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.Activities.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.dll",
-        "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.Host.Local.dll",
+        "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib/net5.0-windows7.0/UiPath.OutOfProcessUi.Common.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.2\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
@@ -7711,8 +7711,8 @@
       },
       "Assemblies": [
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib\\net5.0-windows7.0\\UiPath.Form.ActivityLibrary.dll",
-        "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib\\net5.0-windows7.0\\UiPath.Form.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib\\net5.0-windows7.0\\UiPath.Form.Host.Local.dll",
+        "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib\\net5.0-windows7.0\\UiPath.Form.dll",
         "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2\\lib\\net5.0-windows7.0\\UiPath.OutOfProcessUi.Common.dll"
       ],
       "Path": "C:\\Users\\BRADSOL-User\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.2"

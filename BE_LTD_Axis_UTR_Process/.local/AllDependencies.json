@@ -24592,7 +24592,7 @@
   "projectFileDependencyGroups": {
     "": [],
     "net6.0-windows7.0": [
-      "Microsoft.AspNetCore.Connections.Abstractions >= 7.0.0-rc.2.22476.2",
+      "Microsoft.AspNetCore.Connections.Abstractions >= 7.0.0-rc.2.22476.2 <= 7.0.0-rc.2.22476.2",
       "Microsoft.Identity.Client.Desktop >= 4.47.2 <= 4.47.2",
       "UiPath.Excel.Activities >= 2.16.0 <= 2.16.0",
       "UiPath.Form.Activities >= 2.0.2 <= 2.0.2",
@@ -24623,7 +24623,7 @@
           "Microsoft.AspNetCore.Connections.Abstractions": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[7.0.0-rc.2.22476.2, )"
+            "version": "[7.0.0-rc.2.22476.2, 7.0.0-rc.2.22476.2]"
           },
           "Microsoft.Identity.Client.Desktop": {
             "include": "Runtime",
