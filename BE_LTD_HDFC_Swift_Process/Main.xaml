@@ -489,9 +489,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="831.2,5006.4" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="787.2,4568" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="786.4,4576.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="742.4,4138.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -499,20 +499,20 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence sap:VirtualizedContainerService.HintSize="749.6,4312.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                            <Sequence sap:VirtualizedContainerService.HintSize="705.6,3874.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="687.2,4189.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="643.2,3751.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="624.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="580.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_5">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                                   </Assign.To>
@@ -520,7 +520,7 @@
                                     <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="624.8,1436.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="580.8,998.4" sap2010:WorkflowViewState.IdRef="If_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -529,14 +529,14 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="543.2,1140" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="499.2,701.6" sap2010:WorkflowViewState.IdRef="Sequence_54">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="480.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-                                      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="480.8,62.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Excel">
+                                      <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="436.8,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+                                      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="436.8,62.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Excel">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -544,7 +544,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:KillProcess>
-                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="480.8,772" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,333.6" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -593,10 +593,10 @@
                                           </Sequence>
                                         </TryCatch.Try>
                                         <TryCatch.Catches>
-                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="447.2,597.6" sap2010:WorkflowViewState.IdRef="Catch`1_19">
+                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_19">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
@@ -604,7 +604,7 @@
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                               </ActivityAction.Argument>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="440.8,527.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="440.8,528" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -639,7 +639,7 @@
                                     </Sequence>
                                   </If.Then>
                                 </If>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="564.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_Applications">[Config("ClosingApplications").ToString]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
@@ -650,7 +650,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
-                                <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="624.8,173.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="580.8,173.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                   <ui:AddLogFields.Fields>
                                     <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                   </ui:AddLogFields.Fields>
@@ -660,7 +660,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:AddLogFields>
-                                <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="624.8,266.4" sap2010:WorkflowViewState.IdRef="If_13">
+                                <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="580.8,266.4" sap2010:WorkflowViewState.IdRef="If_13">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -672,7 +672,7 @@
                                     <Throw DisplayName="Throw Consecutive Exceptions exceeded" Exception="[new Exception(Config(&quot;ExceptionMessage_ConsecutiveErrors&quot;).ToString + &quot; Consecutive retry number: &quot; + (ConsecutiveSystemExceptions+1).ToString)]" sap:VirtualizedContainerService.HintSize="334.4,98.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                                   </If.Then>
                                 </If>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Mail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="624.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Mail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\Send Mail\Send Mail.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_Attachment">[Nothing]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_EmailBody">[Config("Send_StartEmailNotificationBody").ToString]</InArgument>
@@ -690,7 +690,7 @@
                                     <InArgument x:TypeArguments="x:Int32" x:Key="in_NumberOfRetries">[CInt(Config("RetryCount"))]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Path_Validation workflow" sap:VirtualizedContainerService.HintSize="564.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="OutLook\Path_Validation.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Path_Validation workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="OutLook\Path_Validation.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_AttachmentsSavingPath">[Config("AttachmentSavingPath").ToString]</InArgument>
                                     <OutArgument x:TypeArguments="x:String" x:Key="out_CurrentDateFolder">[CurrentDateFolderPath]</OutArgument>
@@ -705,7 +705,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreatingInputFile workflow" sap:VirtualizedContainerService.HintSize="561.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Excel\CreatingInputFile.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreatingInputFile workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Excel\CreatingInputFile.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_InputFilePath">[Config("SummaryReportFilePath").ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[Config("SummaryReportName").ToString]</InArgument>
@@ -715,7 +715,7 @@
                                     <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_InputData">[InputDataTable]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Reading_Emails workflow" sap:VirtualizedContainerService.HintSize="624.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="OutLook\Reading_Emails.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Reading_Emails workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="OutLook\Reading_Emails.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <OutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="out_ListMailMessages">[List_MailMessagese]</OutArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_EmailFolder">[Config("EmailFolder").ToString]</InArgument>
@@ -731,7 +731,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GettingBankNameFromEmailBody workflow" sap:VirtualizedContainerService.HintSize="624.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_47" UnSafe="False" WorkflowFileName="OutLook\GettingBankNameFromEmailBody.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GettingBankNameFromEmailBody workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_47" UnSafe="False" WorkflowFileName="OutLook\GettingBankNameFromEmailBody.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_BankNames">[Config("BankName").ToString]</InArgument>
                                     <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="in_ListMailMessages">[List_MailMessagese]</InArgument>
@@ -748,16 +748,16 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke MovingValidationFailedPDFToCurrentDateFolder workflow" sap:VirtualizedContainerService.HintSize="624.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_60" UnSafe="False" WorkflowFileName="MovingValidationFailedPDFToCurrentDateFolder.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke MovingValidationFailedPDFToCurrentDateFolder workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_60" UnSafe="False" WorkflowFileName="MovingValidationFailedPDFToCurrentDateFolder.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_CurrentDateFolder">[CurrentDateFolderPath]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_ValidationFailedPath">[Config("ValidationFailedPDFPath").ToString]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="624.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\AppendingVendorData_ToMaster\Main.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="BRADSOL_Reusable_Tasks\AppendingVendorData_ToMaster\Main.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_MasterFilePath">
-                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Nothing" />
+                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;MasterFilePath&quot;).ToString" />
                                     </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_SubjectFilter">
                                       <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;VendorSubjectFilter&quot;).ToString" />
@@ -843,15 +843,18 @@
                                     <InArgument x:TypeArguments="x:String" x:Key="in_body_PaymentMasterFileDateColumnNotFound">
                                       <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;PaymentMasterFileDateColumnNotFound_MailBody&quot;).ToString" />
                                     </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_AccountNumberColumnName">
+                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;AccountNumberColumnName&quot;).ToString" />
+                                    </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GettingPdfPageCount workflow" sap:VirtualizedContainerService.HintSize="561.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_61" UnSafe="False" WorkflowFileName="GettingPdfPageCount.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GettingPdfPageCount workflow" sap:VirtualizedContainerService.HintSize="580.8,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_61" UnSafe="False" WorkflowFileName="GettingPdfPageCount.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_CurrentDateFolderPath">[CurrentDateFolderPath]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_PdfKeyword">[Config("PdfKeyWord").ToString]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExtractingSenderReferanceNumber workflow" sap:VirtualizedContainerService.HintSize="561.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="OutLook\ExtractingSenderReferanceNumber.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExtractingSenderReferanceNumber workflow" sap:VirtualizedContainerService.HintSize="577.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="OutLook\ExtractingSenderReferanceNumber.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_CurrenntDateFolderPath">[CurrentDateFolderPath]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_SummaryReportPath">[InputFileFullPath]</InArgument>
